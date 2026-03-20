@@ -86,6 +86,11 @@ a {
 .nav a {
   font-size: 0.95rem;
   opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 1;
 }
 
 .hero {
@@ -121,7 +126,7 @@ a {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.2rem, 4.2vw, 4.2rem);
-  line-height: 1.05;
+  line-height: 1.08;
   font-weight: 400;
 }
 
@@ -206,6 +211,10 @@ a {
 
 .news-list p {
   margin: 0;
+}
+
+.contact {
+  padding-bottom: 160px;
 }
 
 .text-link {
