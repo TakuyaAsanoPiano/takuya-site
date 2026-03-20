@@ -4,7 +4,7 @@
   --bg: #ffffff;
   --text: #111111;
   --muted: #666666;
-  --line: rgba(0, 0, 0, 0.08);
+  --line: rgba(0, 0, 0, 0.05);
   --container: 1200px;
   --narrow: 720px;
 }
@@ -108,7 +108,7 @@ a {
   background-size: cover;
   background-position: center;
   filter: grayscale(100%);
-  opacity: 0.12;
+  opacity: 0.08;
 }
 
 .hero-inner {
@@ -150,7 +150,7 @@ a {
 .works-list {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 140px;
 }
 
 .work-item {
@@ -235,6 +235,10 @@ a {
 }
 
 @media (max-width: 900px) {
+  .hero-inner {
+    padding-top: 60px;
+  }
+
   .work-item,
   .work-item.reverse {
     grid-template-columns: 1fr;
@@ -246,10 +250,6 @@ a {
     order: initial;
   }
 
-.hero-inner {
-  padding-top: 60px;
-}
-  
   .section {
     padding: 84px 0;
   }
