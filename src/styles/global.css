@@ -109,7 +109,7 @@ a {
 .hero-inner {
   position: relative;
   max-width: 760px;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .hero-kicker {
@@ -120,15 +120,15 @@ a {
 .hero h1 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.4rem, 5vw, 5rem);
-  line-height: 1.02;
+  font-size: clamp(2.2rem, 4.2vw, 4.2rem);
+  line-height: 1.05;
   font-weight: 400;
 }
 
 .hero-text {
   max-width: 520px;
   margin-top: 24px;
-  color: var(--muted);
+  color: #555;
 }
 
 .section {
@@ -237,6 +237,10 @@ a {
     order: initial;
   }
 
+.hero-inner {
+  padding-top: 60px;
+}
+  
   .section {
     padding: 84px 0;
   }
