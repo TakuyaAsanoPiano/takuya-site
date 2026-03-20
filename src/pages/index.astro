@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
----
+
 const works = [
   {
     title: "Cinnamon",
@@ -12,7 +12,7 @@ const works = [
   {
     title: "Cucumber",
     year: "2024",
-    description: "Post-classical fragments and ambient textures observed as if they were small phenomena.",
+    description: "Fragments of post-classical and ambient textures, observed as small, shifting phenomena.",
     image: "/images/cucumber.jpg",
     link: "#"
   }
@@ -58,8 +58,8 @@ const news = [
             observation, air, and time.
           </h1>
           <p class="hero-text">
-            A portfolio of post-classical and ambient music by Takuya Asano.
-            Built as a quiet exhibition space where works, archives, and ongoing studies can breathe.
+            A portfolio of post-classical and ambient works by Takuya Asano.
+            A quiet space for music, archives, and ongoing observation.
           </p>
         </div>
       </section>
@@ -89,12 +89,12 @@ const news = [
         <div class="container narrow fade-in">
           <h2 class="section-title">About</h2>
           <p>
-            Takuya Asano is a Japanese musician and composer working primarily with piano,
-            post-classical structures, ambient space, and quiet sonic observation.
+            Takuya Asano is a Japanese musician and composer,
+            working primarily with piano, post-classical structures, and ambient space.
           </p>
           <p>
-            His practice moves between composition and research, treating sound as a subtle phenomenon
-            that can reveal memory, texture, atmosphere, and the presence of time.
+            His practice moves between composition and observation,
+            treating sound as a subtle phenomenon of time, memory, and presence.
           </p>
         </div>
       </section>
@@ -120,22 +120,22 @@ const news = [
             For inquiries, collaborations, and performances:
           </p>
           <p>
-            <a href="mailto:hello@example.com" class="text-link">hello@example.com</a>
+            <a href="mailto:gasudoro8@gmail.com" class="text-link">gasudoro8@gmail.com</a>
           </p>
         </div>
       </section>
     </main>
+
+    <script is:inline>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-</script>
