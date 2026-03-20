@@ -68,19 +68,21 @@ const news = [
         <div class="container">
           <h2 class="section-title fade-in">Works</h2>
           <div class="works-list">
-            {works.map((work, index) => (
-              <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
-                <div class="work-image-wrap">
-                  <img src={work.image} alt={work.title} class="work-image" />
-                </div>
-                <div class="work-content">
-                  <p class="work-meta">{work.year}</p>
-                  <h3>{work.title}</h3>
-                  <p>{work.description}</p>
-                  <a href={work.link} class="text-link">→ Listen</a>
-                </div>
-              </article>
-            ))}
+            {works.map((work, index) => {
+              return (
+                <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
+                  <div class="work-image-wrap">
+                    <img src={work.image} alt={work.title} class="work-image" />
+                  </div>
+                  <div class="work-content">
+                    <p class="work-meta">{work.year}</p>
+                    <h3>{work.title}</h3>
+                    <p>{work.description}</p>
+                    <a href={work.link} class="text-link">→ Listen</a>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -103,12 +105,14 @@ const news = [
         <div class="container narrow fade-in">
           <h2 class="section-title">News</h2>
           <ul class="news-list">
-            {news.map((item) => (
-              <li>
-                <span>{item.date}</span>
-                <p>{item.title}</p>
-              </li>
-            ))}
+            {news.map((item) => {
+              return (
+                <li>
+                  <span>{item.date}</span>
+                  <p>{item.title}</p>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
