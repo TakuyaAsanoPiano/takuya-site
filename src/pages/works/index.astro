@@ -1,1 +1,77 @@
+---
+import "../../styles/global.css";
 
+const works = [
+  {
+    title: "Cinnamon",
+    year: "2024",
+    description: "A quiet collection of piano-centered works shaped by memory, air, and delicate resonance.",
+    image: "/images/cinnamon.jpg",
+    link: "/works/cinnamon"
+  },
+  {
+    title: "Cucumber",
+    year: "2024",
+    description: "Fragments of post-classical and ambient textures, observed as small, shifting phenomena.",
+    image: "/images/cucumber.jpg",
+    link: "/works/cucumber"
+  }
+];
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works — Takuya Asano</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="site-title">Takuya Asano</a>
+        <nav class="nav">
+          <a href="/works">Works</a>
+          <a href="/news">News</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Works</h1>
+
+        <div class="works-list">
+          {works.map((work) => (
+            <article class="work-item fade-in">
+              <div class="work-image-wrap">
+                <img src={work.image} alt={work.title} />
+              </div>
+
+              <div class="work-content">
+                <p class="work-meta">{work.year}</p>
+                <h3>{work.title}</h3>
+                <p>{work.description}</p>
+                <a href={work.link} class="text-link">→ View</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </main>
+
+    <script is:inline>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
