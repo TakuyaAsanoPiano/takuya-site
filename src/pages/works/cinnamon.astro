@@ -32,11 +32,11 @@ import "../../styles/global.css";
           A quiet collection of piano-centered works shaped by memory, air, and delicate resonance.
         </p>
 
-        <div class="fade-in" style="margin-top: 48px;">
+        <div class="work-detail-image fade-in">
           <img src="/images/cinnamon.jpg" alt="Cinnamon artwork" />
         </div>
 
-        <div class="fade-in" style="margin-top: 64px;">
+        <div class="fade-in" style="margin-top: 72px;">
           <p>
             This work explores the subtle textures of time and presence, where sound emerges gently and fades into silence.
           </p>
@@ -46,8 +46,8 @@ import "../../styles/global.css";
           </p>
         </div>
 
-        <div class="fade-in" style="margin-top: 72px;">
-          <a href="/works" class="text-link">← Back to Works</a>
+        <div class="fade-in" style="margin-top: 80px;">
+          <a href="/works" class="text-link">Back to Works</a>
         </div>
 
       </div>
@@ -65,21 +65,18 @@ import "../../styles/global.css";
       document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
     </script>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-secondary">
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+          <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+        </nav>
 
-    <nav class="footer-secondary">
-      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
-      <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
-      <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-    </nav>
-
-    <p class="footer-copy">© Takuya Asano</p>
-
-  </div>
-</footer>
-
+        <p class="footer-copy">© Takuya Asano</p>
+      </div>
+    </footer>
   </body>
 </html>
