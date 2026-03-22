@@ -1,16 +1,20 @@
 ---
-import "../../styles/global.css";
+import "../styles/global.css";
 
-const news = [
+const works = [
   {
-    date: "2026.03.20",
-    title: "Website updated",
-    link: "/news/website-updated"
+    title: "Cinnamon",
+    year: "2024",
+    description: "A quiet collection of piano-centered works shaped by memory, air, and delicate resonance.",
+    image: "/images/cinnamon.jpg",
+    link: "/works/cinnamon"
   },
   {
-    date: "2026.03.10",
-    title: "New work released",
-    link: "/news/new-work"
+    title: "Cucumber",
+    year: "2024",
+    description: "Fragments of post-classical and ambient textures, observed as small, shifting phenomena.",
+    image: "/images/cucumber.jpg",
+    link: "/works/cucumber"
   }
 ];
 ---
@@ -19,11 +23,15 @@ const news = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News — Takuya Asano</title>
+    <title>Takuya Asano</title>
+    <meta
+      name="description"
+      content="Portfolio site of Takuya Asano — post-classical and ambient works shaped by quiet observation and organic research."
+    />
   </head>
 
   <body>
-    <header class="site-header">
+    <header class="site-header fade-in">
       <div class="container header-inner">
         <a href="/" class="site-title">Takuya Asano</a>
         <nav class="nav">
@@ -35,21 +43,44 @@ const news = [
       </div>
     </header>
 
-    <main class="section">
-      <div class="container">
-        <h1 class="section-title">News</h1>
+    <main>
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-inner fade-in">
+          <p class="hero-kicker">Portfolio</p>
+          <h1>
+            Quiet works shaped by<br />
+            observation, air, and time.
+          </h1>
+          <p class="hero-text">
+            A portfolio of post-classical and ambient works by Takuya Asano.
+            A quiet space for music, archives, and ongoing observation.
+          </p>
+        </div>
+      </section>
 
-        <ul class="news-list">
-          {news.map((item) => (
-            <li class="fade-in">
-              <span>{item.date}</span>
-              <p>
-                <a href={item.link}>{item.title}</a>
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <section class="section works">
+        <div class="container">
+          <h2 class="section-title fade-in">Works</h2>
+
+          <div class="works-list">
+            {works.map((work, index) => (
+              <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
+                <div class="work-image-wrap">
+                  <img src={work.image} alt={work.title} class="work-image" />
+                </div>
+
+                <div class="work-content">
+                  <p class="work-meta">{work.year}</p>
+                  <h3>{work.title}</h3>
+                  <p>{work.description}</p>
+                  <a href={work.link} class="text-link">View</a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
 
     <script is:inline>
@@ -64,21 +95,18 @@ const news = [
       document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
     </script>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-secondary">
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+          <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+        </nav>
 
-    <nav class="footer-secondary">
-      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
-      <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
-      <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-    </nav>
-
-    <p class="footer-copy">© Takuya Asano</p>
-
-  </div>
-</footer>
-
+        <p class="footer-copy">© Takuya Asano</p>
+      </div>
+    </footer>
   </body>
 </html>
