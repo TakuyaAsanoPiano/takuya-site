@@ -7,21 +7,15 @@ const works = [
     year: "2024",
     description: "A quiet collection of piano-centered works shaped by memory, air, and delicate resonance.",
     image: "/images/cinnamon.jpg",
-    link: "#"
+    link: "/works/cinnamon"
   },
   {
     title: "Cucumber",
     year: "2024",
     description: "Fragments of post-classical and ambient textures, observed as small, shifting phenomena.",
     image: "/images/cucumber.jpg",
-    link: "#"
+    link: "/works/cucumber"
   }
-];
-
-const news = [
-  { date: "2026.03.20", title: "DD update published" },
-  { date: "2026.03.15", title: "New archive entry added" },
-  { date: "2026.03.08", title: "Site launched" }
 ];
 ---
 
@@ -35,15 +29,16 @@ const news = [
       content="Portfolio site of Takuya Asano — post-classical and ambient works shaped by quiet observation and organic research."
     />
   </head>
+
   <body>
     <header class="site-header fade-in">
       <div class="container header-inner">
         <a href="/" class="site-title">Takuya Asano</a>
         <nav class="nav">
           <a href="/works">Works</a>
-          <a href="#about">About</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
+          <a href="/news">News</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -64,69 +59,40 @@ const news = [
         </div>
       </section>
 
-      <section id="works" class="section works">
+      <section class="section works">
         <div class="container">
           <h2 class="section-title fade-in">Works</h2>
+
           <div class="works-list">
-            {works.map((work, index) => {
-              return (
-                <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
-                  <div class="work-image-wrap">
-                    <img src={work.image} alt={work.title} class="work-image" />
-                  </div>
-                  <div class="work-content">
-                    <p class="work-meta">{work.year}</p>
-                    <h3>{work.title}</h3>
-                    <p>{work.description}</p>
-                    <a href={work.link} class="text-link">→ Listen</a>
-                  </div>
-                </article>
-              );
-            })}
+            {works.map((work, index) => (
+              <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
+                <div class="work-image-wrap">
+                  <img src={work.image} alt={work.title} class="work-image" />
+                </div>
+
+                <div class="work-content">
+                  <p class="work-meta">{work.year}</p>
+                  <h3>{work.title}</h3>
+                  <p>{work.description}</p>
+                  <a href={work.link} class="text-link">→ View</a>
+                </div>
+              </article>
+            ))}
           </div>
-         <a href="/works" class="text-link fade-in">→ View all works</a>
+
+          <a href="/works" class="text-link fade-in">View all works →</a>
         </div>
       </section>
 
-      <section id="about" class="section about">
+      <section class="section">
         <div class="container narrow fade-in">
-          <h2 class="section-title">About</h2>
-          <p>
-            Takuya Asano is a Japanese musician and composer,
-            working primarily with piano, post-classical structures, and ambient space.
-          </p>
-          <p>
-            His practice moves between composition and observation,
-            treating sound as a subtle phenomenon of time, memory, and presence.
-          </p>
-        </div>
-      </section>
+          <p class="work-meta">Elsewhere</p>
 
-      <section id="news" class="section news">
-        <div class="container narrow fade-in">
-          <h2 class="section-title">News</h2>
-          <ul class="news-list">
-            {news.map((item) => {
-              return (
-                <li>
-                  <span>{item.date}</span>
-                  <p>{item.title}</p>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="container narrow fade-in">
-          <h2 class="section-title">Contact</h2>
-          <p>
-            For inquiries, collaborations, and performances:
-          </p>
-          <p>
-            <a href="mailto:gasudoro8@gmail.com" class="text-link">gasudoro8@gmail.com</a>
-          </p>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 20px;">
+            <a href="/about" class="text-link">About →</a>
+            <a href="/news" class="text-link">News →</a>
+            <a href="/contact" class="text-link">Contact →</a>
+          </div>
         </div>
       </section>
     </main>
@@ -143,21 +109,18 @@ const news = [
       document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
     </script>
 
-  <footer class="site-footer">
-  <div class="container footer-inner">
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-secondary">
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+          <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+        </nav>
 
-    <nav class="footer-secondary">
-      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
-      <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
-      <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-    </nav>
-
-    <p class="footer-copy">© Takuya Asano</p>
-
-  </div>
-</footer>
-
+        <p class="footer-copy">© Takuya Asano</p>
+      </div>
+    </footer>
   </body>
 </html>
