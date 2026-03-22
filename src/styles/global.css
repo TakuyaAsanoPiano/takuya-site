@@ -151,7 +151,7 @@ a {
 .works-list {
   display: flex;
   flex-direction: column;
-  gap: 140px;
+  gap: 120px;
 }
 
 .work-item {
@@ -173,10 +173,15 @@ a {
   order: 1;
 }
 
+.work-item:hover .work-image {
+  opacity: 0.85;
+}
+
 .work-image {
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  filter: grayscale(100%);
+  filter: grayscale(100%) contrast(1.05);
+  transition: opacity 0.4s ease;
 }
 
 .work-content {
