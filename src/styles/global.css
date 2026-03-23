@@ -250,6 +250,10 @@ a {
   padding-bottom: 160px;
 }
 
+.contact-email {
+  margin-top: 32px;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(8px);
