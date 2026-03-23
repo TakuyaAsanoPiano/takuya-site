@@ -106,15 +106,19 @@ a {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("/images/dd-grid.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url("/images/ddgrid.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: min(58vw, 720px);
   filter: grayscale(100%);
-  opacity: 0.08;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
   position: relative;
+  z-index: 1;
   max-width: 760px;
   padding-top: 120px;
 }
