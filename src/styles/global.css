@@ -434,19 +434,19 @@ a {
 }
 @media (max-width: 640px) {
   .hero {
-    min-height: 100svh;
+    min-height: 82svh;
     align-items: flex-start;
   }
 
   .hero-bg {
     background-position: center center;
-    background-size: cover;
+    background-size: 132%;
     opacity: 0.15;
   }
 
   .hero-inner {
     max-width: 78%;
-    padding-top: 176px;
+    padding-top: 168px;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -462,7 +462,7 @@ a {
 
   .hero-text {
     max-width: none;
-    margin-top: 20px;
+    margin-top: 18px;
     line-height: 1.6;
     white-space: nowrap;
     font-size: 0.92rem;
