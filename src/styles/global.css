@@ -459,8 +459,10 @@ a {
   }
 
   .hero-text {
-    max-width: 24ch;
+    max-width: none;
     margin-top: 20px;
-    line-height: 1.7;
+    line-height: 1.6;
+    white-space: nowrap;
+    font-size: 0.92rem;
   }
 }
