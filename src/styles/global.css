@@ -433,14 +433,34 @@ a {
   }
 }
 @media (max-width: 640px) {
+  .hero {
+    min-height: 100svh;
+    align-items: flex-start;
+  }
+
   .hero-bg {
-    background-position: center bottom;
-    background-size: 88vw auto;
-    opacity: 0.15;
+    background-position: right -24px bottom 6%;
+    background-size: 72vw auto;
+    opacity: 0.12;
   }
 
   .hero-inner {
-    max-width: 100%;
-    padding-top: 104px;
+    max-width: 72%;
+    padding-top: 128px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    max-width: 8ch;
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-text {
+    max-width: 18ch;
+    margin-top: 18px;
+    line-height: 1.7;
   }
 }
