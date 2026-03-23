@@ -453,9 +453,11 @@ a {
   }
 
   .hero h1 {
-    max-width: 8ch;
+    max-width: none;
     line-height: 1.04;
     letter-spacing: 0.01em;
+    white-space: nowrap;
+    font-size: clamp(2.1rem, 8vw, 2.8rem);
   }
 
   .hero-text {
