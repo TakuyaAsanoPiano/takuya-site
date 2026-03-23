@@ -439,14 +439,14 @@ a {
   }
 
   .hero-bg {
-    background-position: right -24px bottom 6%;
-    background-size: 72vw auto;
-    opacity: 0.12;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.15;
   }
 
   .hero-inner {
-    max-width: 72%;
-    padding-top: 128px;
+    max-width: 78%;
+    padding-top: 156px;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -454,13 +454,13 @@ a {
 
   .hero h1 {
     max-width: 8ch;
-    line-height: 1.02;
+    line-height: 1.04;
     letter-spacing: 0.01em;
   }
 
   .hero-text {
-    max-width: 18ch;
-    margin-top: 18px;
+    max-width: 24ch;
+    margin-top: 20px;
     line-height: 1.7;
   }
 }
