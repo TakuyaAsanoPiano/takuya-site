@@ -24,103 +24,106 @@ const works = [
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/logo-t.png" />
+  <link rel="canonical" href="https://asanotakuya.com/" />
 
-  <title>Takuya Asano | Piano, composition, and studies in sound</title>
+  <title>Takuya Asano / 浅野託矢 | Piano, composition, and studies in sound</title>
   <meta
     name="description"
-    content="The official website of Takuya Asano, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
+    content="The official website of Takuya Asano, 浅野託矢, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
   />
 
-  <meta property="og:title" content="Takuya Asano | Piano, composition, and studies in sound" />
+  <meta property="og:title" content="Takuya Asano / 浅野託矢 | Piano, composition, and studies in sound" />
   <meta
     property="og:description"
-    content="The official website of Takuya Asano, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
+    content="The official website of Takuya Asano, 浅野託矢, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
   />
-  <meta property="og:image" content="https://takuya-site.gasudoro8.workers.dev/images/ddgrid.jpg" />
+  <meta property="og:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://takuya-site.gasudoro8.workers.dev/" />
+  <meta property="og:url" content="https://asanotakuya.com/" />
+  <meta property="og:site_name" content="Takuya Asano" />
+  <meta property="og:locale" content="ja_JP" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Takuya Asano | Piano, composition, and studies in sound" />
+  <meta name="twitter:title" content="Takuya Asano / 浅野託矢 | Piano, composition, and studies in sound" />
   <meta
     name="twitter:description"
-    content="The official website of Takuya Asano, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
+    content="The official website of Takuya Asano, 浅野託矢, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
   />
-  <meta name="twitter:image" content="https://takuya-site.gasudoro8.workers.dev/images/ddgrid.jpg" />
+  <meta name="twitter:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
 </head>
 
-  <body>
-    <header class="site-header fade-in">
-      <div class="container header-inner">
-        <a href="/" class="site-title">Takuya Asano</a>
-        <nav class="nav">
-          <a href="/works">Works</a>
-          <a href="/news">News</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-        </nav>
+<body>
+  <header class="site-header fade-in">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner fade-in">
+        <h1>Takuya Asano</h1>
+        <p class="hero-text">
+          Piano, composition, and studies in sound.
+        </p>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-inner fade-in">
-          <h1>Takuya Asano</h1>
-          <p class="hero-text">
-            Piano, composition, and studies in sound.
-          </p>
+    <section class="section works">
+      <div class="container">
+        <h2 class="section-title fade-in">Works</h2>
+
+        <div class="works-list">
+          {works.map((work, index) => (
+            <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
+              <div class="work-image-wrap">
+                <img src={work.image} alt={work.title} class="work-image" />
+              </div>
+
+              <div class="work-content">
+                <p class="work-meta">{work.year}</p>
+                <h3>{work.title}</h3>
+                <p>{work.description}</p>
+                <a href={work.link} class="text-link">View</a>
+              </div>
+            </article>
+          ))}
         </div>
-      </section>
-
-      <section class="section works">
-        <div class="container">
-          <h2 class="section-title fade-in">Works</h2>
-
-          <div class="works-list">
-            {works.map((work, index) => (
-              <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
-                <div class="work-image-wrap">
-                  <img src={work.image} alt={work.title} class="work-image" />
-                </div>
-
-                <div class="work-content">
-                  <p class="work-meta">{work.year}</p>
-                  <h3>{work.title}</h3>
-                  <p>{work.description}</p>
-                  <a href={work.link} class="text-link">View</a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script is:inline>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
-        });
-      }, { threshold: 0.12 });
-
-      document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-    </script>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <nav class="footer-secondary">
-         <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-         <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
-         <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
-         <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
-         <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-       </nav>
-
-        <p class="footer-copy">© Takuya Asano</p>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-secondary">
+        <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
+        <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+      </nav>
+
+      <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
+    </div>
+  </footer>
+</body>
 </html>
