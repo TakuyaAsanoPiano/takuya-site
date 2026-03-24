@@ -59,15 +59,15 @@ import "../../styles/global.css";
 
       <div class="fade-in" style="margin-top: 72px;">
         <p>
-          This album completes a three-part gathering of earlier works from the DD series.
+          <em>DD Sketch C</em> gathers DD32 to DD42 from the ongoing DD improvisation series.
         </p>
 
         <p>
-          The pieces were recorded across different moments in the life of the project, after the first DD album and before they had been assembled into a wider sequence.
+          These recordings were made after the first album <em>DD</em>, and before they had been assembled into a broader sequence of their own.
         </p>
 
         <p>
-          With <em>DD Sketch C</em>, the final part of that sequence comes into view.  
+          With this third volume, the arc of <em>DD Sketch</em> comes into view.  
           Together, A, B, and C form a set of small studies — each separate, yet all part of one longer movement.
         </p>
 
@@ -76,7 +76,8 @@ import "../../styles/global.css";
         </p>
 
         <p>
-          Since these recordings were made in my previous studio, revisiting them after moving into a new one felt like reopening an earlier notebook and listening again from a changed place.
+          DD1 through DD42 were recorded in my previous studio.  
+          Revisiting them after moving into a new one felt like reopening an earlier notebook and listening again from a changed place.
         </p>
       </div>
 
