@@ -3,60 +3,68 @@ import "../../styles/global.css";
 
 const works = [
   {
-    title: "DD",
-    year: "2020",
-    description: "The first collection from an ongoing diary of piano improvisations, recorded in a residential studio in Miyagi.",
-    image: "/images/dd_album.jpg",
-    link: "/works/dd"
-  },
-  {
-    title: "Cinnamon",
-    year: "2023",
-    description: "A quiet collection of piano-centered works shaped by memory, air, and delicate resonance.",
-    image: "/images/cinnamon.jpg",
-    link: "/works/cinnamon"
-  },
-  {
-    title: "Cucumber",
-    year: "2024",
-    description: "Fragments of post-classical and ambient textures, observed as small, shifting phenomena.",
-    image: "/images/cucumber.jpg",
-    link: "/works/cucumber"
-  },
-  {
-    title: "Furune AmaAma",
-    year: "2025",
-    description: "A single born from a rain-wrapped journey and a quiet encounter with a piano in the satoyama of Motegi.",
-    image: "/images/furuneamaama.jpg",
-    link: "/works/furune-amaama"
-  },
-  {
-    title: "DD Sketch A",
-    year: "2025",
-    description: "The first volume in a three-part return to the DD series, gathering DD12 to DD21 into a renewed sequence.",
-    image: "/images/ddsketch_a.jpg",
-    link: "/works/dd-sketch-a"
-  },
-  {
-    title: "DD Sketch B",
-    year: "2025",
-    description: "The second volume in a three-part return to the DD series, gathering DD22 to DD31 like another page in a larger sketchbook.",
-    image: "/images/ddsketch_b.jpg",
-    link: "/works/dd-sketch-b"
+    title: "raft",
+    year: "2026",
+    format: "Single",
+    description: "An instrumental work written as the theme for Uraniwa Atorie, moving quietly alongside everyday scenes.",
+    image: "/images/raft.jpg",
+    link: "/works/raft"
   },
   {
     title: "DD Sketch C",
     year: "2025",
+    format: "Album",
     description: "The third volume in a three-part return to the DD series, gathering DD32 to DD42 and completing the arc of DD Sketch.",
     image: "/images/ddsketch_c.jpg",
     link: "/works/dd-sketch-c"
   },
   {
-    title: "raft",
-    year: "2026",
-    description: "An instrumental work written as the theme for Uraniwa Atorie, moving quietly alongside everyday scenes.",
-    image: "/images/raft.jpg",
-    link: "/works/raft"
+    title: "DD Sketch B",
+    year: "2025",
+    format: "Album",
+    description: "The second volume in a three-part return to the DD series, gathering DD22 to DD31 like another page in a larger sketchbook.",
+    image: "/images/ddsketch_b.jpg",
+    link: "/works/dd-sketch-b"
+  },
+  {
+    title: "DD Sketch A",
+    year: "2025",
+    format: "Album",
+    description: "The first volume in a three-part return to the DD series, gathering DD12 to DD21 into a renewed sequence.",
+    image: "/images/ddsketch_a.jpg",
+    link: "/works/dd-sketch-a"
+  },
+  {
+    title: "Furune AmaAma",
+    year: "2025",
+    format: "Single",
+    description: "A single born from a rain-wrapped journey and a quiet encounter with a piano in the satoyama of Motegi.",
+    image: "/images/furuneamaama.jpg",
+    link: "/works/furune-amaama"
+  },
+  {
+    title: "Cucumber",
+    year: "2024",
+    format: "Album",
+    description: "Fragments of post-classical and ambient textures, observed as small, shifting phenomena.",
+    image: "/images/cucumber.jpg",
+    link: "/works/cucumber"
+  },
+  {
+    title: "Cinnamon",
+    year: "2023",
+    format: "Album",
+    description: "A quiet collection of piano-centered works shaped by memory, air, and delicate resonance.",
+    image: "/images/cinnamon.jpg",
+    link: "/works/cinnamon"
+  },
+  {
+    title: "DD",
+    year: "2020",
+    format: "Album",
+    description: "The first collection from an ongoing diary of piano improvisations, recorded in a residential studio in Miyagi.",
+    image: "/images/dd_album.jpg",
+    link: "/works/dd"
   }
 ];
 ---
@@ -114,7 +122,7 @@ const works = [
             </div>
 
             <div class="work-content">
-              <p class="work-meta">{work.year}</p>
+              <p class="work-meta">{work.year} · {work.format}</p>
               <h3>{work.title}</h3>
               <p>{work.description}</p>
               <a href={work.link} class="text-link">View</a>
