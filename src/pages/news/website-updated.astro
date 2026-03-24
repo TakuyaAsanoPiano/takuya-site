@@ -6,95 +6,173 @@ import "../../styles/global.css";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website Updated | Takuya Asano</title>
+  <title>Website updated | News | Takuya Asano</title>
   <meta
     name="description"
-    content="An update on the official website of Takuya Asano, with refinements to structure, presentation, and access to works."
+    content="A quiet structural update to the website of Takuya Asano."
   />
 
-  <meta property="og:title" content="Website Updated | Takuya Asano" />
+  <meta property="og:title" content="Website updated | News | Takuya Asano" />
   <meta
     property="og:description"
-    content="An update on the official website of Takuya Asano, with refinements to structure, presentation, and access to works."
+    content="A quiet structural update to the website of Takuya Asano."
   />
   <meta property="og:image" content="https://takuya-site.gasudoro8.workers.dev/images/ddgrid.jpg" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://takuya-site.gasudoro8.workers.dev/news/website-updated" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Website Updated | Takuya Asano" />
+  <meta name="twitter:title" content="Website updated | News | Takuya Asano" />
   <meta
     name="twitter:description"
-    content="An update on the official website of Takuya Asano, with refinements to structure, presentation, and access to works."
+    content="A quiet structural update to the website of Takuya Asano."
   />
   <meta name="twitter:image" content="https://takuya-site.gasudoro8.workers.dev/images/ddgrid.jpg" />
 </head>
 
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="/" class="site-title">Takuya Asano</a>
-        <nav class="nav">
-          <a href="/works">Works</a>
-          <a href="/news">News</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="section">
-      <div class="container narrow">
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-article fade-in">
+        <p class="news-article-date">2026.03.20</p>
+        <h1 class="section-title">Website updated</h1>
 
-        <p class="work-meta fade-in">2026.03.20</p>
-        <h1 class="page-title fade-in">Website updated</h1>
+        <p class="news-article-intro-en">
+          A quiet structural update to the website.
+        </p>
 
-        <div class="fade-in">
+        <div class="news-article-body">
           <p>
-            The website structure has been updated to create a clearer archive for works.
+            ウェブサイトの構造と表示を一部更新しました。
           </p>
-
           <p>
-            The Works section is now organized into an index and individual pages, allowing a quieter and more focused navigation.
+            主に Works と News まわりの整理を進め、全体の見通しや余白の流れを少しずつ整えています。
           </p>
-
           <p>
-            News, About, and Contact have also been arranged as separate pages as the site continues to take shape.
+            大きな変更というより、静かな修正の積み重ねとして、今後も必要に応じて更新していく予定です。
           </p>
         </div>
 
-        <div class="fade-in" style="margin-top: 80px;">
-          <a href="/news" class="text-link">Back to News</a>
-        </div>
+        <p class="news-article-note-en">
+          The site will continue to evolve gradually, with care for structure, silence, and clarity.
+        </p>
 
-      </div>
-    </main>
+        <p class="news-back-link">
+          <a href="/news">Back to News</a>
+        </p>
+      </article>
+    </div>
+  </main>
 
-    <script is:inline>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
-        });
-      }, { threshold: 0.12 });
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
 
-      document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-    </script>
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <nav class="footer-secondary">
-          <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
-          <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
-          <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-        </nav>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-secondary">
+        <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
+        <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+      </nav>
 
-        <p class="footer-copy">© Takuya Asano</p>
-      </div>
-    </footer>
-
-  </body>
+      <p class="footer-copy">© Takuya Asano</p>
+    </div>
+  </footer>
+</body>
 </html>
+
+<style>
+  .news-article-date {
+    margin: 0 0 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    color: var(--muted);
+  }
+
+  .news-article-intro-en {
+    margin: -24px 0 32px;
+    max-width: 32rem;
+    color: var(--muted);
+  }
+
+  .news-article-body {
+    display: grid;
+    gap: 1.2rem;
+    max-width: 38rem;
+  }
+
+  .news-article-body p {
+    margin: 0;
+    line-height: 1.95;
+  }
+
+  .news-article-note-en {
+    margin: 36px 0 0;
+    max-width: 34rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+
+  .news-back-link {
+    margin-top: 48px;
+  }
+
+  .news-back-link a {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+  }
+
+  .news-back-link a:hover {
+    opacity: 0.65;
+  }
+
+  @media (max-width: 640px) {
+    .news-article-intro-en {
+      margin-top: -28px;
+      margin-bottom: 28px;
+      font-size: 0.94rem;
+      line-height: 1.8;
+    }
+
+    .news-article-body p {
+      line-height: 1.9;
+    }
+
+    .news-article-note-en {
+      margin-top: 32px;
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+
+    .news-back-link {
+      margin-top: 40px;
+    }
+  }
+</style>
