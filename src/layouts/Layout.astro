@@ -4,16 +4,20 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
+  ogUrl?: string;
 }
 
 const {
-  title = "Takuya Asano | Piano, composition, and studies in sound",
-  description = "The official website of Takuya Asano, a pianist and composer exploring sound through piano, composition, and quiet studies in listening."
+  title = "Takuya Asano / 浅野託矢 | Piano, composition, and studies in sound",
+  description = "The official website of Takuya Asano, 浅野託矢, a pianist and composer exploring sound through piano, composition, and quiet studies in listening.",
+  ogImage = "https://asanotakuya.com/images/ddgrid.jpg",
+  ogUrl = "https://asanotakuya.com/"
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,16 +26,20 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={ogUrl} />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/images/ddgrid.jpg" />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:site_name" content="Takuya Asano" />
+    <meta property="og:locale" content="ja_JP" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/images/ddgrid.jpg" />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
     <slot />
