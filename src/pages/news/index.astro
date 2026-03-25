@@ -1,5 +1,5 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 
 const news = [
   {
@@ -17,38 +17,13 @@ const news = [
 ];
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/news" />
-
-  <title>News | Takuya Asano</title>
-  <meta
-    name="description"
-    content="Notes on releases, performances, and quiet updates from Takuya Asano."
-  />
-
-  <meta property="og:title" content="News | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="Notes on releases, performances, and quiet updates from Takuya Asano."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://asanotakuya.com/news" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="News | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="Notes on releases, performances, and quiet updates from Takuya Asano."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-</head>
-
-<body>
+<Layout
+  title="News | Takuya Asano"
+  description="Notes on releases, performances, and quiet updates from Takuya Asano."
+  ogImage="https://asanotakuya.com/images/ddgrid.jpg"
+  ogUrl="https://asanotakuya.com/news"
+  ogType="website"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -109,68 +84,67 @@ const news = [
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
 
-<style>
-  .news-header {
-    margin-bottom: 56px;
-  }
-
-  .news-intro {
-    margin: -28px 0 0;
-    max-width: 34rem;
-    color: var(--muted);
-  }
-
-  .news-item-body {
-    min-width: 0;
-  }
-
-  .news-item-title {
-    margin: 0;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.28rem;
-    line-height: 1.45;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-
-  .news-item-title a {
-    transition: opacity 0.3s ease;
-  }
-
-  .news-item-title a:hover {
-    opacity: 0.65;
-  }
-
-  .news-item-note {
-    margin: 8px 0 0;
-    color: var(--muted);
-    font-size: 0.96rem;
-    line-height: 1.8;
-  }
-
-  @media (max-width: 640px) {
+  <style>
     .news-header {
-      margin-bottom: 44px;
+      margin-bottom: 56px;
     }
 
     .news-intro {
-      margin-top: -30px;
-      font-size: 0.94rem;
-      line-height: 1.8;
+      margin: -28px 0 0;
+      max-width: 34rem;
+      color: var(--muted);
+    }
+
+    .news-item-body {
+      min-width: 0;
     }
 
     .news-item-title {
-      font-size: 1.16rem;
-      line-height: 1.5;
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.28rem;
+      line-height: 1.45;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-item-title a {
+      transition: opacity 0.3s ease;
+    }
+
+    .news-item-title a:hover {
+      opacity: 0.65;
     }
 
     .news-item-note {
-      margin-top: 6px;
-      font-size: 0.92rem;
-      line-height: 1.75;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.8;
     }
-  }
-</style>
+
+    @media (max-width: 640px) {
+      .news-header {
+        margin-bottom: 44px;
+      }
+
+      .news-intro {
+        margin-top: -30px;
+        font-size: 0.94rem;
+        line-height: 1.8;
+      }
+
+      .news-item-title {
+        font-size: 1.16rem;
+        line-height: 1.5;
+      }
+
+      .news-item-note {
+        margin-top: 6px;
+        font-size: 0.92rem;
+        line-height: 1.75;
+      }
+    }
+  </style>
+</Layout>
