@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -21,10 +21,11 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 15px;
-  line-height: 1.85;
+  line-height: 1.95;
   font-weight: 300;
+  letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -38,6 +39,20 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p,
+li,
+dd,
+dt,
+figcaption,
+small {
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+}
+
+p {
+  margin: 0 0 1.25rem;
 }
 
 .container {
@@ -71,8 +86,12 @@ a {
 .news-list span,
 .text-link,
 .footer-copy,
-.footer-secondary a {
-  font-family: "Cormorant Garamond", serif;
+.footer-secondary a,
+.section-title,
+.page-title,
+.work-content h3,
+.hero h1 {
+  font-family: "Cormorant Garamond", "Noto Serif JP", serif;
   letter-spacing: 0.02em;
 }
 
@@ -87,7 +106,7 @@ a {
 
 .nav a {
   font-size: 0.95rem;
-  opacity: 0.8;
+  opacity: 0.82;
   transition: opacity 0.3s ease;
 }
 
@@ -130,33 +149,32 @@ a {
 
 .hero h1 {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.2rem, 4.2vw, 4.2rem);
   line-height: 1.08;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .hero-text {
-  max-width: 520px;
+  max-width: 560px;
   margin-top: 24px;
   color: #555555;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
 }
 
 .section {
-  padding: 140px 0 120px;
+  padding: 124px 0 104px;
 }
 
 .section-title {
-  margin: 0 0 56px;
-  font-family: "Cormorant Garamond", serif;
+  margin: 0 0 48px;
   font-size: 2rem;
   font-weight: 400;
 }
 
 .page-title {
   margin: 0 0 24px;
-  font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.2rem, 4vw, 3.6rem);
   font-weight: 400;
   line-height: 1.1;
@@ -165,7 +183,7 @@ a {
 .works-list {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 104px;
 }
 
 .work-item {
@@ -203,15 +221,19 @@ a {
 }
 
 .work-meta {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: var(--muted);
+  font-size: 0.98rem;
 }
 
 .work-content h3 {
   margin: 0 0 16px;
-  font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   font-weight: 400;
+}
+
+.work-content p {
+  margin-bottom: 0;
 }
 
 .text-link {
@@ -223,7 +245,7 @@ a {
 .work-content .text-link {
   margin-top: 18px;
   font-size: 0.95rem;
-  opacity: 0.55;
+  opacity: 0.58;
   transition: opacity 0.3s ease;
 }
 
@@ -242,20 +264,21 @@ a {
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 24px;
-  padding: 20px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .news-list p {
   margin: 0;
+  line-height: 1.85;
 }
 
 .contact {
-  padding-bottom: 160px;
+  padding-bottom: 136px;
 }
 
 .contact-email {
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
 .fade-in {
@@ -270,20 +293,20 @@ a {
 }
 
 .site-footer {
-  padding: 40px 0 56px;
+  padding: 36px 0 52px;
   border-top: 1px solid var(--line);
 }
 
 .footer-inner {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .footer-secondary {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px 24px;
+  gap: 16px 22px;
 }
 
 .footer-copy,
@@ -301,7 +324,17 @@ a {
 }
 
 .footer-copy {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
+}
+
+.work-detail-image {
+  margin-top: 56px;
+  width: min(100%, 560px);
+}
+
+.work-detail-image img {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 900px) {
@@ -333,7 +366,7 @@ a {
   }
 
   .hero-inner {
-    padding-top: 148px;
+    padding-top: 144px;
   }
 
   .work-item,
@@ -348,7 +381,7 @@ a {
   }
 
   .section {
-    padding: 132px 0 84px;
+    padding: 116px 0 84px;
   }
 
   .container {
@@ -361,7 +394,7 @@ a {
 
   .page-title {
     margin-bottom: 20px;
-    line-height: 1.06;
+    line-height: 1.08;
   }
 
   .news-list li {
@@ -370,11 +403,11 @@ a {
   }
 
   .site-footer {
-    padding: 32px 0 44px;
+    padding: 30px 0 42px;
   }
 
   .footer-inner {
-    gap: 16px;
+    gap: 14px;
   }
 
   .footer-secondary {
@@ -383,56 +416,25 @@ a {
 }
 
 @media (max-width: 640px) {
+  body {
+    font-size: 14.5px;
+    line-height: 1.9;
+  }
+
+  p,
+  li,
+  dd,
+  dt,
+  figcaption,
+  small {
+    line-height: 1.9;
+    letter-spacing: 0.025em;
+  }
+
   .container {
     width: min(var(--container), calc(100% - 36px));
   }
 
-  .hero-inner {
-    padding-top: 156px;
-  }
-
-  .section {
-    padding: 124px 0 76px;
-  }
-
-  .works-list {
-    gap: 92px;
-  }
-
-  .work-item {
-    gap: 22px;
-  }
-
-  .page-title {
-    font-size: clamp(2rem, 9vw, 2.8rem);
-  }
-
-  .hero h1 {
-    font-size: clamp(2rem, 10vw, 3.2rem);
-    line-height: 1.04;
-  }
-
-  .hero-text {
-    margin-top: 18px;
-  }
-}
-.work-detail-image {
-  margin-top: 64px;
-  width: min(100%, 560px);
-}
-
-.work-detail-image img {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 640px) {
-  .work-detail-image {
-    margin-top: 52px;
-    width: min(100%, 440px);
-  }
-}
-@media (max-width: 640px) {
   .hero {
     min-height: 82svh;
     align-items: flex-start;
@@ -445,26 +447,48 @@ a {
   }
 
   .hero-inner {
-    max-width: 78%;
-    padding-top: 168px;
+    max-width: 86%;
+    padding-top: 164px;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
   }
 
+  .section {
+    padding: 108px 0 72px;
+  }
+
+  .works-list {
+    gap: 80px;
+  }
+
+  .work-item {
+    gap: 22px;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
   .hero h1 {
     max-width: none;
-    line-height: 1.04;
-    letter-spacing: 0.01em;
     white-space: nowrap;
-    font-size: clamp(2.1rem, 8vw, 2.8rem);
+    font-size: clamp(2.05rem, 8vw, 2.8rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
   }
 
   .hero-text {
     max-width: none;
-    margin-top: 18px;
-    line-height: 1.6;
+    margin-top: 16px;
+    line-height: 1.75;
     white-space: nowrap;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+  }
+
+  .work-detail-image {
+    margin-top: 48px;
+    width: min(100%, 440px);
   }
 }
