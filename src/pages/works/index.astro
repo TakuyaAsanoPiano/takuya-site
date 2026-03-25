@@ -1,5 +1,5 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 
 const works = [
   {
@@ -69,40 +69,13 @@ const works = [
 ];
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/works" />
-
-  <title>Works | Takuya Asano</title>
-  <meta
-    name="description"
-    content="Works by Takuya Asano, 浅野託矢, including piano albums, post-classical releases, ambient recordings, and ongoing studies in sound."
-  />
-
-  <meta property="og:title" content="Works | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="Works by Takuya Asano, 浅野託矢, including piano albums, post-classical releases, ambient recordings, and ongoing studies in sound."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://asanotakuya.com/works" />
-  <meta property="og:site_name" content="Takuya Asano" />
-  <meta property="og:locale" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Works | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="Works by Takuya Asano, 浅野託矢, including piano albums, post-classical releases, ambient recordings, and ongoing studies in sound."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-</head>
-
-<body>
+<Layout
+  title="Works | Takuya Asano"
+  description="Works by Takuya Asano, 浅野託矢, including piano albums, post-classical releases, ambient recordings, and ongoing studies in sound."
+  ogImage="https://asanotakuya.com/images/ddgrid.jpg"
+  ogUrl="https://asanotakuya.com/works"
+  ogType="website"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -163,5 +136,4 @@ const works = [
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
+</Layout>
