@@ -1,41 +1,14 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/about" />
-
-  <title>About | Takuya Asano / 浅野託矢</title>
-  <meta
-    name="description"
-    content="About Takuya Asano, 浅野託矢, a pianist and composer based in Japan, working across piano, post-classical, ambient, and experimental music."
-  />
-
-  <meta property="og:title" content="About | Takuya Asano / 浅野託矢" />
-  <meta
-    property="og:description"
-    content="About Takuya Asano, 浅野託矢, a pianist and composer based in Japan, working across piano, post-classical, ambient, and experimental music."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-  <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://asanotakuya.com/about" />
-  <meta property="og:site_name" content="Takuya Asano" />
-  <meta property="og:locale" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About | Takuya Asano / 浅野託矢" />
-  <meta
-    name="twitter:description"
-    content="About Takuya Asano, 浅野託矢, a pianist and composer based in Japan, working across piano, post-classical, ambient, and experimental music."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-</head>
-
-<body>
+<Layout
+  title="About | Takuya Asano / 浅野託矢"
+  description="About Takuya Asano, 浅野託矢, a pianist and composer based in Japan, working across piano, post-classical, ambient, and experimental music."
+  ogImage="https://asanotakuya.com/images/ddgrid.jpg"
+  ogUrl="https://asanotakuya.com/about"
+  ogType="profile"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -96,5 +69,4 @@ import "../styles/global.css";
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
+</Layout>
