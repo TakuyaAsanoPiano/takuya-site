@@ -492,3 +492,20 @@ p {
     width: min(100%, 440px);
   }
 }
+
+
+.news-list p,
+.news-list li,
+.news-list {
+  font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+}
+
+.news-list p {
+  line-height: 1.72;
+  letter-spacing: 0.015em;
+  color: #333333;
+}
+
+.news-list span {
+  opacity: 0.78;
+}
