@@ -1,41 +1,14 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/works/dd" />
-
-  <title>DD | Takuya Asano</title>
-  <meta
-    name="description"
-    content="DD by Takuya Asano, 浅野託矢. The first album in an ongoing series of piano improvisations, recorded in Miyagi, Japan."
-  />
-
-  <meta property="og:title" content="DD | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="DD by Takuya Asano, 浅野託矢. The first album in an ongoing series of piano improvisations, recorded in Miyagi, Japan."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/dd_album.jpg" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://asanotakuya.com/works/dd" />
-  <meta property="og:site_name" content="Takuya Asano" />
-  <meta property="og:locale" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DD | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="DD by Takuya Asano, 浅野託矢. The first album in an ongoing series of piano improvisations, recorded in Miyagi, Japan."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/dd_album.jpg" />
-</head>
-
-<body>
+<Layout
+  title="DD | Takuya Asano"
+  description="DD by Takuya Asano, 浅野託矢. The first album in an ongoing series of piano improvisations, recorded in Miyagi, Japan."
+  ogImage="https://asanotakuya.com/images/dd_album.jpg"
+  ogUrl="https://asanotakuya.com/works/dd"
+  ogType="article"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -127,5 +100,4 @@ import "../../styles/global.css";
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
+</Layout>
