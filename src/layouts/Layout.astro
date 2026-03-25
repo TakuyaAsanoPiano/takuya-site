@@ -6,13 +6,15 @@ interface Props {
   description?: string;
   ogImage?: string;
   ogUrl?: string;
+  ogType?: string;
 }
 
 const {
   title = "Takuya Asano | Piano, Composition, Sound Research",
   description = "Takuya Asano (浅野託矢) is a pianist and composer exploring sound through piano, composition, and quiet studies in listening. A research-based approach to post-classical and ambient music.",
   ogImage = "https://asanotakuya.com/images/ddgrid.jpg",
-  ogUrl = "https://asanotakuya.com/"
+  ogUrl = "https://asanotakuya.com/",
+  ogType = "website"
 } = Astro.props;
 ---
 
@@ -21,8 +23,10 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/logo-t.png" />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/png" href="/logo-t.png" />
+    <link rel="apple-touch-icon" href="/logo-t.png" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -31,7 +35,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:site_name" content="Takuya Asano" />
     <meta property="og:locale" content="ja_JP" />
