@@ -1,41 +1,14 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/works/dd-sketch-c" />
-
-  <title>DD Sketch C | Takuya Asano</title>
-  <meta
-    name="description"
-    content="DD Sketch C by Takuya Asano, 浅野託矢. The third volume of a three-part return to the DD piano improvisation series, gathering DD32 to DD42."
-  />
-
-  <meta property="og:title" content="DD Sketch C | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="DD Sketch C by Takuya Asano, 浅野託矢. The third volume of a three-part return to the DD piano improvisation series, gathering DD32 to DD42."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/ddsketch_c.jpg" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://asanotakuya.com/works/dd-sketch-c" />
-  <meta property="og:site_name" content="Takuya Asano" />
-  <meta property="og:locale" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DD Sketch C | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="DD Sketch C by Takuya Asano, 浅野託矢. The third volume of a three-part return to the DD piano improvisation series, gathering DD32 to DD42."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/ddsketch_c.jpg" />
-</head>
-
-<body>
+<Layout
+  title="DD Sketch C | Takuya Asano"
+  description="DD Sketch C by Takuya Asano, 浅野託矢. The third volume of a three-part return to the DD piano improvisation series, gathering DD32 to DD42."
+  ogImage="https://asanotakuya.com/images/ddsketch_c.jpg"
+  ogUrl="https://asanotakuya.com/works/dd-sketch-c"
+  ogType="article"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -133,5 +106,4 @@ import "../../styles/global.css";
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
+</Layout>
