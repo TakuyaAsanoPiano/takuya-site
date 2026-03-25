@@ -1,41 +1,14 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/works/raft" />
-
-  <title>raft | Takuya Asano</title>
-  <meta
-    name="description"
-    content="raft by Takuya Asano, 浅野託矢. An instrumental theme for Uraniwa Atorie in Ogawara, Miyagi, moving quietly alongside everyday scenes."
-  />
-
-  <meta property="og:title" content="raft | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="raft by Takuya Asano, 浅野託矢. An instrumental theme for Uraniwa Atorie in Ogawara, Miyagi, moving quietly alongside everyday scenes."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/raft.jpg" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://asanotakuya.com/works/raft" />
-  <meta property="og:site_name" content="Takuya Asano" />
-  <meta property="og:locale" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="raft | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="raft by Takuya Asano, 浅野託矢. An instrumental theme for Uraniwa Atorie in Ogawara, Miyagi, moving quietly alongside everyday scenes."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/raft.jpg" />
-</head>
-
-<body>
+<Layout
+  title="raft | Takuya Asano"
+  description="raft by Takuya Asano, 浅野託矢. An instrumental theme for Uraniwa Atorie in Ogawara, Miyagi, moving quietly alongside everyday scenes."
+  ogImage="https://asanotakuya.com/images/raft.jpg"
+  ogUrl="https://asanotakuya.com/works/raft"
+  ogType="article"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -128,5 +101,4 @@ import "../../styles/global.css";
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
+</Layout>
