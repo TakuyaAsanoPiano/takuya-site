@@ -1,39 +1,14 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/contact" />
-
-  <title>Contact | Takuya Asano</title>
-  <meta
-    name="description"
-    content="Contact Takuya Asano for inquiries regarding music, performances, recordings, and related projects."
-  />
-
-  <meta property="og:title" content="Contact | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="Contact Takuya Asano for inquiries regarding music, performances, recordings, and related projects."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://asanotakuya.com/contact" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="Contact Takuya Asano for inquiries regarding music, performances, recordings, and related projects."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-</head>
-
-<body>
+<Layout
+  title="Contact | Takuya Asano"
+  description="Contact Takuya Asano for inquiries regarding music, performances, recordings, and related projects."
+  ogImage="https://asanotakuya.com/images/ddgrid.jpg"
+  ogUrl="https://asanotakuya.com/contact"
+  ogType="website"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -88,5 +63,4 @@ import "../styles/global.css";
       <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
     </div>
   </footer>
-</body>
-</html>
+</Layout>
