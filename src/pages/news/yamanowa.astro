@@ -1,1 +1,210 @@
+---
+import "../../styles/global.css";
+---
 
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/logo-t.png" />
+    <link rel="canonical" href="https://asanotakuya.com/news/yamanowa" />
+
+    <title>山の和 | News | Takuya Asano</title>
+    <meta
+      name="description"
+      content="Information for the spring gathering '山の和' at Jeenya in Akiu, Sendai."
+    />
+
+    <meta property="og:title" content="山の和 | News | Takuya Asano" />
+    <meta
+      property="og:description"
+      content="Information for the spring gathering '山の和' at Jeenya in Akiu, Sendai."
+    />
+    <meta property="og:image" content="https://asanotakuya.com/images/yamanowa-flyer.jpg" />
+    <meta property="og:url" content="https://asanotakuya.com/news/yamanowa" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Takuya Asano" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="山の和 | News | Takuya Asano" />
+    <meta
+      name="twitter:description"
+      content="Information for the spring gathering '山の和' at Jeenya in Akiu, Sendai."
+    />
+    <meta name="twitter:image" content="https://asanotakuya.com/images/yamanowa-flyer.jpg" />
+  </head>
+
+  <body>
+    <main class="news-entry">
+      <a href="/news" class="back-link">← Back to News</a>
+
+      <article class="news-article">
+        <p class="news-date">2026.04.11</p>
+        <h1>山の和</h1>
+
+        <p class="news-intro-en">
+          A live performance is scheduled for April 11, 2026.
+        </p>
+
+        <div class="news-body">
+          <p>日程：2026年4月11日（土）</p>
+          <p>時間：11:00 – 16:00</p>
+          <p>会場：Jeenya（仙台市秋保町馬場字辺田86）</p>
+
+          <br />
+
+          <p>
+            出店：<br />
+            ミュゲ花屋／ペンギン文庫／bau leather／Roebling<br />
+            ダモコーヒーハウス／cookie girl／本沢三丁目パン工房／Jeenya ほか
+          </p>
+
+          <br />
+
+          <p>演奏：浅野託矢</p>
+          <p>開始：14:00頃（約30–40分）</p>
+
+          <br />
+
+          <p>
+            主催：
+            <a
+              href="https://www.instagram.com/jeenya7/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @jeenya7
+            </a>
+          </p>
+
+          <br />
+
+          <p>
+            備考：<br />
+            雨天時は4月12日（日）へ順延<br />
+            両日雨天の場合は内容を変更して開催
+          </p>
+
+          <br />
+
+          <p>
+            ※内容は変更となる場合があります。<br />
+            最新情報は主催者の案内をご確認ください。
+          </p>
+        </div>
+
+        <figure class="flyer">
+          <img src="/images/yamanowa-flyer.jpg" alt="山の和 フライヤー" />
+        </figure>
+
+        <p class="news-note-en">
+          Please refer to the organizer’s announcement for the latest information.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
+
+<style>
+  .news-entry {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 24px 120px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 44px;
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    font-size: 0.98rem;
+    color: #333333;
+    text-decoration: none;
+    opacity: 0.72;
+    transition: opacity 0.2s ease;
+  }
+
+  .back-link:hover {
+    opacity: 1;
+  }
+
+  .news-article h1 {
+    margin: 0 0 12px;
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    color: #222222;
+  }
+
+  .news-date {
+    margin: 0 0 16px;
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    font-size: 0.98rem;
+    color: #666666;
+    letter-spacing: 0.04em;
+  }
+
+  .news-intro-en {
+    margin: 0 0 42px;
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: #333333;
+  }
+
+  .news-body p {
+    margin: 0;
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    line-height: 1.65;
+    letter-spacing: 0.008em;
+    color: #333333;
+  }
+
+  .news-body a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  .flyer {
+    margin: 56px auto 40px;
+    max-width: 60%;
+  }
+
+  .flyer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.92;
+  }
+
+  .news-note-en {
+    margin: 0;
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: #555555;
+  }
+
+  @media (max-width: 768px) {
+    .news-entry {
+      padding: 56px 20px 96px;
+    }
+
+    .back-link {
+      margin-bottom: 36px;
+    }
+
+    .news-intro-en {
+      margin-bottom: 36px;
+    }
+
+    .flyer {
+      max-width: 100%;
+      margin: 44px auto 32px;
+    }
+  }
+</style>
