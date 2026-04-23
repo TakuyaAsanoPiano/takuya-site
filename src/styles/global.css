@@ -270,7 +270,10 @@ p {
 
 .news-list p {
   margin: 0;
-  line-height: 1.85;
+  font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+  line-height: 1.65;
+  letter-spacing: 0.008em;
+  color: #333333;
 }
 
 .contact {
@@ -491,12 +494,4 @@ p {
     margin-top: 48px;
     width: min(100%, 440px);
   }
-}
-
-
-.news-list p {
-  font-family: "Cormorant Garamond", "Noto Serif JP", serif;
-  line-height: 1.65;
-  letter-spacing: 0.008em;
-  color: #333333;
 }
