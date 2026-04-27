@@ -1,22 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const works = [
-  {
-    title: "Cinnamon",
-    year: "2023",
-    description: "A piano work shaped around rain and nostalgia.",
-    image: "/images/cinnamon.jpg",
-    link: "/works/cinnamon"
-  },
-  {
-    title: "Cucumber",
-    year: "2024",
-    description: "A piano work shaped around light and nostalgia.",
-    image: "/images/cucumber.jpg",
-    link: "/works/cucumber"
-  }
-];
 ---
 
 <Layout
@@ -49,26 +32,41 @@ const works = [
       </div>
     </section>
 
-    <section class="section works">
-      <div class="container">
-        <h2 class="section-title fade-in">Works</h2>
+    <section class="section current-project">
+      <div class="container narrow">
+        <p class="section-kicker fade-in">Current Project</p>
 
-        <div class="works-list">
-          {works.map((work, index) => (
-            <article class={`work-item fade-in ${index % 2 !== 0 ? "reverse" : ""}`}>
-              <div class="work-image-wrap">
-                <img src={work.image} alt={work.title} class="work-image" />
-              </div>
-
-              <div class="work-content">
-                <p class="work-meta">{work.year}</p>
-                <h3>{work.title}</h3>
-                <p>{work.description}</p>
-                <a href={work.link} class="text-link">View</a>
-              </div>
-            </article>
-          ))}
+        <div class="project-image-wrap fade-in">
+          <img
+            src="/images/cadinene-project.jpg"
+            alt="Cadinene project image"
+            class="project-image"
+          />
         </div>
+
+        <div class="project-body fade-in">
+          <h2 class="project-title">Cadinene</h2>
+          <p>A study of scent, time, and the fading contour of sound.</p>
+          <p>An ongoing work exploring piano, repetition, and subtle shifts in texture.</p>
+          <a href="/news/cadinene-project" class="text-link">Project note</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section latest-news">
+      <div class="container narrow">
+        <p class="section-kicker fade-in">Latest News</p>
+
+        <ul class="news-list fade-in">
+          <li>
+            <span>2026.04.23</span>
+            <div class="news-item-body">
+              <p class="news-item-title">
+                <a href="/news/dd48-released">DD48 released</a>
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -98,4 +96,90 @@ const works = [
       <p class="footer-copy">© Takuya Asano</p>
     </div>
   </footer>
+
+  <style>
+    .section-kicker {
+      margin: 0 0 32px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Current Project */
+    .current-project {
+      padding-bottom: 80px;
+    }
+
+    .project-image-wrap {
+      margin-bottom: 40px;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      filter: grayscale(8%);
+      opacity: 0.93;
+    }
+
+    .project-title {
+      margin: 0 0 16px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: 0.01em;
+    }
+
+    .project-body p {
+      max-width: 480px;
+      color: #444444;
+    }
+
+    /* Latest News */
+    .latest-news {
+      padding-top: 0;
+    }
+
+    .latest-news .news-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .news-item-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.18rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-item-title a {
+      transition: opacity 0.3s ease;
+    }
+
+    .news-item-title a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .section-kicker {
+        margin-bottom: 24px;
+      }
+
+      .project-image {
+        max-width: 88%;
+      }
+
+      .project-image-wrap {
+        margin-bottom: 32px;
+      }
+
+      .project-title {
+        font-size: clamp(1.6rem, 6vw, 2rem);
+      }
+    }
+  </style>
 </Layout>
