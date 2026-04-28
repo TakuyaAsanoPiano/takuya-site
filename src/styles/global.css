@@ -242,6 +242,12 @@ p {
   font-size: 1rem;
 }
 
+.listen-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .work-content .text-link {
   margin-top: 18px;
   font-size: 0.95rem;
