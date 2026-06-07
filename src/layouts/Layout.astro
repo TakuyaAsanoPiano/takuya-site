@@ -6,13 +6,15 @@ interface Props {
   description?: string;
   ogImage?: string;
   ogUrl?: string;
+  ogType?: string;
 }
 
 const {
-  title = "Takuya Asano / 浅野託矢 | Piano, composition, and studies in sound",
-  description = "The official website of Takuya Asano, 浅野託矢, a pianist and composer exploring sound through piano, composition, and quiet studies in listening.",
+  title = "Takuya Asano | Piano, Composition, Sound Research",
+  description = "The official website of Takuya Asano — a musician based in Japan, working with piano across post-classical, ambient, and electronic music.",
   ogImage = "https://asanotakuya.com/images/ddgrid.jpg",
-  ogUrl = "https://asanotakuya.com/"
+  ogUrl = "https://asanotakuya.com/",
+  ogType = "website"
 } = Astro.props;
 ---
 
@@ -21,8 +23,10 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/logo-t.png" />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/png" href="/logo-t.png" />
+    <link rel="apple-touch-icon" href="/logo-t.png" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -31,7 +35,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:site_name" content="Takuya Asano" />
     <meta property="og:locale" content="ja_JP" />
@@ -43,5 +47,17 @@ const {
   </head>
   <body>
     <slot />
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-secondary">
+          <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
+          <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+        </nav>
+        <p class="footer-copy">© Takuya Asano</p>
+      </div>
+    </footer>
   </body>
 </html>

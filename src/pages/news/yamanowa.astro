@@ -1,0 +1,220 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="山の和 | News | Takuya Asano"
+  description="Information for the spring gathering '山の和' at Jeenya in Akiu, Sendai."
+  ogImage="https://asanotakuya.com/images/yamanowa-flyer.jpg"
+  ogUrl="https://asanotakuya.com/news/yamanowa"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.04.11</p>
+          <h1 class="news-post-title">山の和</h1>
+        </header>
+
+        <div class="news-post-content fade-in">
+          <p class="news-intro-en">
+            A live performance took place in Akiu, Sendai on April 11, 2026.
+          </p>
+
+          <div class="news-body">
+            <p>日程：2026年4月11日（土）</p>
+            <p>時間：11:00 – 16:00</p>
+            <p>会場：Jeenya（仙台市秋保町馬場字辺田86）</p>
+
+            <br />
+
+            <p>
+              出店：<br />
+              ミュゲ花屋／ペンギン文庫／bau leather／Roebling<br />
+              ダモコーヒーハウス／cookie girl／本沢三丁目パン工房／Jeenya ほか
+            </p>
+
+            <br />
+
+            <p>演奏：浅野託矢</p>
+            <p>開始：14:00頃（約30–40分）</p>
+
+            <br />
+
+            <p>
+              主催：
+              <a
+                href="https://www.instagram.com/jeenya.7/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @jeenya.7
+              </a>
+            </p>
+
+            <br />
+
+            <p>
+              備考：<br />
+              雨天時は4月12日（日）へ順延<br />
+              両日雨天の場合は内容を変更して開催
+            </p>
+
+            <br />
+
+            <p>
+              ※内容は変更となる場合があります。<br />
+              最新情報は主催者の案内をご確認ください。
+            </p>
+          </div>
+
+          <figure class="news-flyer">
+            <img src="/images/yamanowa-flyer.jpg" alt="山の和 フライヤー" />
+          </figure>
+
+          <p class="news-note-en">
+            Please refer to the organizer's announcement for the latest information.
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .news-intro-en {
+      margin-bottom: 36px;
+    }
+
+    .news-body p {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.65;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .news-body a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
+      transition: opacity 0.3s ease;
+    }
+
+    .news-body a:hover {
+      opacity: 0.65;
+    }
+
+    .news-flyer {
+      margin: 48px 0 40px;
+      max-width: 60%;
+    }
+
+    .news-flyer img {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 0.92;
+    }
+
+    .news-note-en {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-flyer {
+        max-width: 100%;
+        margin: 36px 0 28px;
+      }
+
+      .news-post-content p,
+      .news-body p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+    }
+  </style>
+</Layout>

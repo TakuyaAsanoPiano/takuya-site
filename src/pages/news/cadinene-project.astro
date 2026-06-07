@@ -1,0 +1,188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Cadinene Project | News | Takuya Asano"
+  description="Cadinene is an ongoing project by Takuya Asano, exploring scent, time, and the fading contour of sound through piano and repetition."
+  ogImage="https://asanotakuya.com/images/cadinene-project.jpg"
+  ogUrl="https://asanotakuya.com/news/cadinene-project"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.04.27</p>
+          <h1 class="news-post-title">Cadinene Project</h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img src="/images/cadinene-project.jpg" alt="Cadinene project image" />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>Cadinene is an ongoing project by Takuya Asano.</p>
+
+          <p>
+            It begins with an interest in scent, time, and the way sound changes
+            its contour as it fades.
+          </p>
+
+          <p>
+            The project takes its name from cadinene, a fragrant compound found
+            in hinoki and other woods. Rather than treating scent as an
+            explanation, Cadinene uses it as a way to think about time,
+            volatility, memory, and the movement of sound.
+          </p>
+
+          <p>
+            Through piano, repetition, subtle processing, and quiet shifts in
+            texture, the project explores how a sound appears, lingers, blurs,
+            and disappears.
+          </p>
+
+          <p>
+            Cadinene is currently developing across recordings, short studies,
+            and related visual materials.
+          </p>
+
+          <p>Selected studies and related releases will be added gradually.</p>
+
+          <hr class="section-divider" />
+
+          <p lang="ja">
+            Cadinene は、香り・時間・音の輪郭を手がかりに進めているプロジェクトです。
+          </p>
+
+          <p lang="ja">
+            ヒノキなどに含まれる香気成分 cadinene から着想し、香りそのものを説明するのではなく、揮発、記憶、余韻、輪郭の変化を音楽の構造として捉えています。
+          </p>
+
+          <p lang="ja">
+            ピアノ、反復、微細な音響処理を通して、音が現れ、留まり、滲み、消えていく時間を探っています。
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 48px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      opacity: 0.93;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 48px 0;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 36px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .section-divider {
+        margin: 36px 0;
+      }
+    }
+  </style>
+</Layout>

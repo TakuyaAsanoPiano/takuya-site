@@ -1,39 +1,14 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/works/cucumber" />
-
-  <title>Cucumber | Takuya Asano</title>
-  <meta
-    name="description"
-    content="Cucumber by Takuya Asano. A post-classical piano work shaped through light, air, and subtle repetition."
-  />
-
-  <meta property="og:title" content="Cucumber | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="Cucumber by Takuya Asano. A post-classical piano work shaped through light, air, and subtle repetition."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/cucumber.jpg" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://asanotakuya.com/works/cucumber" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cucumber | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="Cucumber by Takuya Asano. A post-classical piano work shaped through light, air, and subtle repetition."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/cucumber.jpg" />
-</head>
-
-<body>
+<Layout
+  title="Cucumber | Takuya Asano"
+  description="Cucumber by Takuya Asano, 浅野託矢. A piano-based post-classical album shaped by light, air, and subtle shifts in tone."
+  ogImage="https://asanotakuya.com/images/cucumber.jpg"
+  ogUrl="https://asanotakuya.com/works/cucumber"
+  ogType="article"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -83,15 +58,19 @@ import "../../styles/global.css";
         </p>
       </div>
 
-      <div class="fade-in" style="margin-top: 72px;">
+      <div class="fade-in listen-links" style="margin-top: 72px;">
         <a
-          href="https://open.spotify.com/intl-ja/album/4IVimRBXTYQ9xs8mhmwPcq?si=-RoC5FZLQKGRDJQfpYnT6Q"
+          href="https://open.spotify.com/intl-ja/album/4IVimRBXTYQ9xs8mhmwPcq?si=66rb_nZHR5uyd2lmkL2AHA"
           class="text-link"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Listen
-        </a>
+        >Spotify</a>
+        <a
+          href="https://music.apple.com/jp/album/cucumber/1765955477"
+          class="text-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Apple Music</a>
       </div>
 
       <div class="fade-in" style="margin-top: 80px;">
@@ -110,19 +89,4 @@ import "../../styles/global.css";
     }, { threshold: 0.12 });
 
     document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-  </script>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <nav class="footer-secondary">
-        <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
-        <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
-        <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-      </nav>
-      <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
-    </div>
-  </footer>
-</body>
-</html>
+  </script></Layout>

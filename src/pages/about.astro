@@ -1,41 +1,14 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/about" />
-
-  <title>About | Takuya Asano / 浅野託矢</title>
-  <meta
-    name="description"
-    content="About Takuya Asano, 浅野託矢, a pianist and composer whose work explores sound, space, and quiet forms of musical expression."
-  />
-
-  <meta property="og:title" content="About | Takuya Asano / 浅野託矢" />
-  <meta
-    property="og:description"
-    content="About Takuya Asano, 浅野託矢, a pianist and composer whose work explores sound, space, and quiet forms of musical expression."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-  <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://asanotakuya.com/about" />
-  <meta property="og:site_name" content="Takuya Asano" />
-  <meta property="og:locale" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About | Takuya Asano / 浅野託矢" />
-  <meta
-    name="twitter:description"
-    content="About Takuya Asano, 浅野託矢, a pianist and composer whose work explores sound, space, and quiet forms of musical expression."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/ddgrid.jpg" />
-</head>
-
-<body>
+<Layout
+  title="About | Takuya Asano / 浅野託矢"
+  description="About Takuya Asano — a musician based in Japan, working with piano across post-classical, ambient, and electronic music."
+  ogImage="https://asanotakuya.com/images/ddgrid.jpg"
+  ogUrl="https://asanotakuya.com/about"
+  ogType="profile"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -54,19 +27,20 @@ import "../styles/global.css";
 
       <div class="fade-in">
         <p>
-          Takuya Asano, known in Japanese as 浅野託矢, is a musician and composer based in Japan.
+          Takuya Asano is a pianist and composer based in Japan.
+          His work moves between piano, composition, and quiet studies in sound,
+          often through repetition, observation, and subtle shifts in texture.
         </p>
 
         <p>
-          His work centers on piano, while moving quietly between post-classical, ambient, and experimental forms.
+          Across releases, performances, and ongoing research-based projects,
+          he explores the relation between listening, form, and presence.
         </p>
+      </div>
 
-        <p>
-          Through composition, recording, and small-scale observation, he explores sound as presence — something fragile, spatial, and alive with subtle shifts of air and time.
-        </p>
-
-        <p>
-          This site serves as an archive of works, releases, and ongoing studies.
+      <div class="fade-in" style="margin-top: 48px;">
+        <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 8px;">
+          Selected works and recordings are available on the <a href="/works">Works</a> page.
         </p>
       </div>
     </div>
@@ -82,19 +56,4 @@ import "../styles/global.css";
     }, { threshold: 0.12 });
 
     document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-  </script>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <nav class="footer-secondary">
-        <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
-        <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
-        <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-      </nav>
-      <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
-    </div>
-  </footer>
-</body>
-</html>
+  </script></Layout>
