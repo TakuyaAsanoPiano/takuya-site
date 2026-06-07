@@ -1,39 +1,14 @@
 ---
-import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/logo-t.png" />
-  <link rel="canonical" href="https://asanotakuya.com/news/dd49-released" />
-
-  <title>DD49 Released | News | Takuya Asano</title>
-  <meta
-    name="description"
-    content="A new piece from the DD series, DD49, is now available on Bandcamp."
-  />
-
-  <meta property="og:title" content="DD49 Released | News | Takuya Asano" />
-  <meta
-    property="og:description"
-    content="A new piece from the DD series, DD49, is now available on Bandcamp."
-  />
-  <meta property="og:image" content="https://asanotakuya.com/images/DD49.jpg" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://asanotakuya.com/news/dd49-released" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DD49 Released | News | Takuya Asano" />
-  <meta
-    name="twitter:description"
-    content="A new piece from the DD series, DD49, is now available on Bandcamp."
-  />
-  <meta name="twitter:image" content="https://asanotakuya.com/images/DD49.jpg" />
-</head>
-
-<body>
+<Layout
+  title="DD49 Released | News | Takuya Asano"
+  description="A new piece from the DD series, DD49, is now available on Bandcamp."
+  ogImage="https://asanotakuya.com/images/DD49.jpg"
+  ogUrl="https://asanotakuya.com/news/dd49-released"
+  ogType="article"
+>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="site-title">Takuya Asano</a>
@@ -48,50 +23,58 @@ import "../../styles/global.css";
 
   <main class="section">
     <div class="container narrow">
-      <article class="news-article fade-in">
-        <p class="news-article-date">2026.06.07</p>
-        <h1 class="section-title">DD49 Released</h1>
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
 
-        <p class="news-article-intro-en">
-          A new piece from the DD series, DD49, is now available on Bandcamp.
-        </p>
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.06.07</p>
+          <h1 class="news-post-title">DD49 Released</h1>
+        </header>
 
-        <div class="work-detail-image">
-          <img src="/images/DD49.jpg" alt="DD49" />
-        </div>
+        <figure class="news-post-image fade-in">
+          <img src="/images/DD49.jpg" alt="DD49 artwork" />
+        </figure>
 
-        <div class="news-article-body">
+        <div class="news-post-content fade-in">
+          <p>A new piece from the DD series, DD49, is now available on Bandcamp.</p>
+
           <p>DD49</p>
+
           <p>A study of breath and diffusion.</p>
+
           <p>
             Soft elements continue to expand,<br />
             before structure can fully appear.
           </p>
+
           <p>
             Dry contours remain underneath,<br />
             thin, wooden, unresolved.
           </p>
+
           <p>Movement without arrival.</p>
+
           <p>
             Moving between sweetness,<br />
             skeleton,<br />
             and internal depth.
           </p>
+
           <p>
             No resolution,<br />
             only continuous passage.
           </p>
+
+          <p>
+            <a
+              href="https://takuyaasano.bandcamp.com/track/dd49"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Listen on Bandcamp
+            </a>
+          </p>
         </div>
-
-        <p class="news-article-link">
-          <a href="https://takuyaasano.bandcamp.com/track/dd49" target="_blank" rel="noopener noreferrer">
-            Listen on Bandcamp →
-          </a>
-        </p>
-
-        <p class="news-back-link">
-          <a href="/news">Back to News</a>
-        </p>
       </article>
     </div>
   </main>
@@ -107,105 +90,105 @@ import "../../styles/global.css";
 
     document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
   </script>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <nav class="footer-secondary">
-        <a href="https://www.instagram.com/takuya_asano_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.youtube.com/@TakuyaAsanoDD" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://open.spotify.com/artist/2EXtaUmvzUTnfXZx14NoDx" target="_blank" rel="noopener noreferrer">Spotify</a>
-        <a href="https://music.apple.com/jp/artist/%E6%B5%85%E9%87%8E%E8%A8%97%E7%9F%A2/1659347974" target="_blank" rel="noopener noreferrer">Apple Music</a>
-        <a href="https://takuyaasano.bandcamp.com/music" target="_blank" rel="noopener noreferrer">Bandcamp</a>
-      </nav>
-
-      <p class="footer-copy">© Takuya Asano / 浅野託矢</p>
-    </div>
-  </footer>
-</body>
-</html>
-
-<style>
-  .news-article-date {
-    margin: 0 0 18px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1rem;
-    color: var(--muted);
-  }
-
-  .news-article-intro-en {
-    margin: -24px 0 32px;
-    max-width: 32rem;
-    color: var(--muted);
-  }
-
-  .news-article-body {
-    display: grid;
-    gap: 1.2rem;
-    max-width: 38rem;
-    margin-top: 48px;
-  }
-
-  .news-article-body p {
-    margin: 0;
-    line-height: 1.95;
-  }
-
-  .news-article-link {
-    margin: 36px 0 0;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1rem;
-  }
-
-  .news-article-link a {
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    transition: opacity 0.3s ease;
-  }
-
-  .news-article-link a:hover {
-    opacity: 0.65;
-  }
-
-  .news-back-link {
-    margin-top: 48px;
-  }
-
-  .news-back-link a {
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    transition: opacity 0.3s ease;
-  }
-
-  .news-back-link a:hover {
-    opacity: 0.65;
-  }
-
-  @media (max-width: 640px) {
-    .news-article-intro-en {
-      margin-top: -28px;
-      margin-bottom: 28px;
-      font-size: 0.94rem;
-      line-height: 1.8;
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
     }
 
-    .news-article-body {
-      margin-top: 40px;
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
     }
 
-    .news-article-body p {
-      line-height: 1.9;
+    .back-link:hover {
+      opacity: 0.65;
     }
 
-    .news-article-link {
-      margin-top: 28px;
+    .news-post-header {
+      margin-bottom: 32px;
     }
 
-    .news-back-link {
-      margin-top: 40px;
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
     }
-  }
-</style>
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .news-post-content a {
+      transition: opacity 0.3s ease;
+    }
+
+    .news-post-content a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+    }
+  </style>
+</Layout>
