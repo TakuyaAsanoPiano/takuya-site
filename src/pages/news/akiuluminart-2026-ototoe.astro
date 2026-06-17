@@ -1,0 +1,294 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="AKIULUMINART 2026 Closing Event: OTOTOE［音と絵］ | News | Takuya Asano"
+  description="I will perform piano as part of OTOTOE［音と絵］ at GREAT DANE BREWING in Akiu on July 11, 2026."
+  ogImage="https://asanotakuya.com/images/akiuluminart-2026-ototoe.jpg"
+  ogUrl="https://asanotakuya.com/news/akiuluminart-2026-ototoe"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.07.11</p>
+          <h1 class="news-post-title">
+            AKIULUMINART 2026 Closing Event: OTOTOE［音と絵］
+          </h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img
+            src="/images/akiuluminart-2026-ototoe.jpg"
+            alt="AKIULUMINART 2026 Closing Event OTOTOE［音と絵］ flyer"
+          />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>
+            I will perform piano as part of AKIULUMINART 2026 Closing Event
+            “OTOTOE［音と絵］,” held at GREAT DANE BREWING in Akiu.
+          </p>
+
+          <p>
+            2026年7月11日（土）、秋保の GREAT DANE BREWING で開催される<br />
+            AKIULUMINART 2026 クロージングイベント「OTOTOE［音と絵］」に出演します。
+          </p>
+
+          <p>
+            会場は GREAT DANE BREWING 2階。<br />
+            高橋亨明さんの弾き語り、浅野託矢のピアノ演奏にあわせて、<br />
+            中川和寿さんが即興でライブドローイングを行います。
+          </p>
+
+          <p>
+            同会場に展示されているAKIULUMINARTの作品、GREAT DANE BREWINGの建物、料理、クラフトビールも重なりながら、<br />
+            音、線、空間がその場で生まれていく時間になる予定です。
+          </p>
+
+          <p>
+            ライブならではの空気を、ゆっくり味わっていただけたら嬉しいです。
+          </p>
+        </div>
+
+        <div class="event-info fade-in">
+          <h2 class="event-info-title">Information</h2>
+
+          <dl class="event-info-list">
+            <dt>Date</dt>
+            <dd>2026年7月11日（土）</dd>
+
+            <dt>Time</dt>
+            <dd>Open 17:30 / Start 18:00</dd>
+
+            <dt>Venue</dt>
+            <dd>
+              GREAT DANE BREWING 2階<br />
+              仙台市太白区秋保町湯元枇杷原5
+            </dd>
+
+            <dt>Ticket</dt>
+            <dd>2,500円（税込・1ドリンク付）</dd>
+
+            <dt>Reservation</dt>
+            <dd>
+              <a
+                href="https://qr.paps.jp/7rGaS"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://qr.paps.jp/7rGaS
+              </a>
+            </dd>
+
+            <dt>Official</dt>
+            <dd>
+              <a
+                href="https://www.akiulumina.jp/art.html#event"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.akiulumina.jp/art.html#event
+              </a>
+            </dd>
+
+            <dt>Note</dt>
+            <dd>定員に達し次第、予約受付終了。当日券あり。</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      line-height: 1.16;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .news-post-content a {
+      transition: opacity 0.3s ease;
+    }
+
+    .news-post-content a:hover {
+      opacity: 0.65;
+    }
+
+    /* Information */
+    .event-info {
+      max-width: 560px;
+      margin: 48px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .event-info-title {
+      margin: 0 0 24px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.18rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .event-info-list {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      color: #333333;
+    }
+
+    .event-info-list dt {
+      margin: 0;
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .event-info-list dd {
+      margin: 4px 0 18px;
+      font-size: 1.04rem;
+      line-height: 1.7;
+      letter-spacing: 0.008em;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .event-info-list dd:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-info-list a {
+      transition: opacity 0.3s ease;
+    }
+
+    .event-info-list a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .event-info {
+        max-width: 100%;
+        margin-top: 40px;
+        padding-top: 28px;
+      }
+
+      .event-info-list dd {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</Layout>
