@@ -1,0 +1,214 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="DD51 Released | Takuya Asano"
+  description="DD51 is a piano work from the Cadinene period, shaped around β-elemene, inward change, and a chord held before transformation becomes an event."
+  ogImage="https://asanotakuya.com/images/DD51.jpg"
+  ogUrl="https://asanotakuya.com/news/dd51-released"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.06.21</p>
+          <h1 class="news-post-title">DD51 Released</h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img src="/images/DD51.jpg" alt="DD51 artwork" />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>DD51 is now available on Bandcamp.</p>
+
+          <p>A study of inward change.</p>
+
+          <p>
+            A chord before change<br />
+            becomes an event.
+          </p>
+
+          <p>
+            Air enters the room,<br />
+            then the body,<br />
+            then time.
+          </p>
+
+          <p>
+            No resolution,<br />
+            only a threshold held in sound.
+          </p>
+
+          <p>DD51 is a piece from the Cadinene period, connected to β-elemene.</p>
+
+          <p>
+            Rather than emerging directly from a single place or event, this
+            piece appeared while reorganizing the Cadinene works and observing
+            how each piece relates to a different aromatic component.
+          </p>
+
+          <p>
+            For this work, β-elemene is understood as a quiet point of
+            transition:<br />
+            a movement inward,<br />
+            an entrance into shade,<br />
+            a chord where brightness and ambiguity have not yet separated.
+          </p>
+
+          <p>DD51 is a chord before change becomes an event.</p>
+
+          <p>
+            DD51は、Cadinene期の新曲です。<br />
+            対応する成分は β-エレメン。
+          </p>
+
+          <p>
+            外の空気が部屋に入り、<br />
+            身体と時間の内側へ変わっていくような感覚を、<br />
+            和音として捉えた作品です。
+          </p>
+
+          <p>
+            <a
+              href="https://takuyaasano.bandcamp.com/track/dd51"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Listen on Bandcamp
+            </a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .news-post-content a {
+      transition: opacity 0.3s ease;
+    }
+
+    .news-post-content a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+    }
+  </style>
+</Layout>
