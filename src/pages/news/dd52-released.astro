@@ -1,0 +1,211 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="DD52 Released | Takuya Asano"
+  description="DD52 is a piano work from the Cadinene period, shaped around pinene, the first breath inside the forest, and the body remembering before thought."
+  ogImage="https://asanotakuya.com/images/DD52.jpg"
+  ogUrl="https://asanotakuya.com/news/dd52-released"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.06.28</p>
+          <h1 class="news-post-title">DD52 Released</h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img src="/images/DD52.jpg" alt="DD52 artwork" />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>DD52 is now available on Bandcamp.</p>
+
+          <p>A study of pinene.</p>
+
+          <p>
+            The first breath<br />
+            inside the forest.
+          </p>
+
+          <p>
+            Before thought,<br />
+            the body remembers.
+          </p>
+
+          <p>
+            Tension opens<br />
+            into clear air.
+          </p>
+
+          <p>
+            No resolution,<br />
+            only the instant of entering.
+          </p>
+
+          <p>DD52 is a piece from the Cadinene period, connected to α-pinene.</p>
+
+          <p>
+            This work observes the first moment of entering a forest:<br />
+            not the memory of a place,<br />
+            but the body responding before thought begins.
+          </p>
+
+          <p>
+            Air enters first as scent,<br />
+            then as breath,<br />
+            then as a change in the body.
+          </p>
+
+          <p>
+            Within the Cadinene studies, scent is not treated only as smell.<br />
+            It is observed as a physical response,<br />
+            a threshold where memory, tension, and clear air briefly meet.
+          </p>
+
+          <p>DD52 is the instant before the forest becomes familiar.</p>
+
+          <p>
+            <a
+              href="https://takuyaasano.bandcamp.com/track/dd52"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Listen on Bandcamp
+            </a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    .news-post-content a {
+      transition: opacity 0.3s ease;
+    }
+
+    .news-post-content a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+    }
+  </style>
+</Layout>
