@@ -52,6 +52,13 @@ import Layout from "../../layouts/Layout.astro";
           </p>
 
           <p>
+            時間は19:00〜20:00を予定しています。<br />
+            雨天の場合は、8月7日（金）19:00〜20:00へ延期となります。
+          </p>
+
+          <p>参加無料・予約不要です。</p>
+
+          <p>
             仙台七夕まつりの夜、公園に広がる光と音の空間を、どうぞお楽しみください。
           </p>
         </div>
@@ -69,7 +76,8 @@ import Layout from "../../layouts/Layout.astro";
             <dt>Rain Date</dt>
             <dd>
               2026.08.07 (Fri)<br />
-              19:00–20:00
+              19:00–20:00<br />
+              <span class="event-note">※雨天時は8月7日（金）19:00〜20:00へ延期予定です。</span>
             </dd>
 
             <dt>Venue</dt>
@@ -241,6 +249,14 @@ import Layout from "../../layouts/Layout.astro";
 
     .event-info-list dd:last-child {
       margin-bottom: 0;
+    }
+
+    .event-note {
+      display: inline-block;
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
     }
 
     .event-section a {
