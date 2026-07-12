@@ -1,0 +1,322 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="原町七夕まつり「光と音のパフォーマンス」出演のお知らせ | Takuya Asano"
+  description="2026年8月6日、仙台市の原町カッコウ公園で開催される「原町七夕まつり 光と音のパフォーマンス」に出演します。浅野託矢の音楽と吉村尚子の光・映像によるパフォーマンス。参加無料、予約不要。"
+  ogImage="https://asanotakuya.com/images/haranomachi2026_1.jpg"
+  ogUrl="https://asanotakuya.com/news/haranomachi-tanabata-2026"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.08.06</p>
+          <h1 class="news-post-title">
+            原町七夕まつり「光と音のパフォーマンス」出演のお知らせ
+          </h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img
+            src="/images/haranomachi2026_1.jpg"
+            alt="原町七夕まつり 光と音のパフォーマンス"
+          />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>
+            2026年8月6日（木）、原町カッコウ公園で開催される<br />
+            「原町七夕まつり 光と音のパフォーマンス」に出演します。
+          </p>
+
+          <p>
+            美術家・吉村尚子さんとともに、<br />
+            ピアノ・映像・光によるパフォーマンスを行います。
+          </p>
+
+          <p>
+            仙台七夕まつりの夜、公園に広がる光と音の空間を、どうぞお楽しみください。
+          </p>
+        </div>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">Event Information</h2>
+
+          <dl class="event-info-list">
+            <dt>Date</dt>
+            <dd>
+              2026.08.06 (Thu)<br />
+              19:00–20:00
+            </dd>
+
+            <dt>Rain Date</dt>
+            <dd>
+              2026.08.07 (Fri)<br />
+              19:00–20:00
+            </dd>
+
+            <dt>Venue</dt>
+            <dd>
+              原町カッコウ公園<br />
+              <a
+                href="https://maps.app.goo.gl/zsHbWhTb2ehS9xuY9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Mapsで開く
+              </a>
+            </dd>
+
+            <dt>Admission</dt>
+            <dd>
+              Free<br />
+              No reservation required
+            </dd>
+
+            <dt>Artists</dt>
+            <dd>
+              Takuya Asano — Music<br />
+              Naoko Yoshimura — Light &amp; Visuals
+            </dd>
+
+            <dt>Organizer</dt>
+            <dd>原町商店街 原町東部商店会</dd>
+
+            <dt>Cooperation</dt>
+            <dd>原町苦竹第二区親交会</dd>
+          </dl>
+
+          <p class="event-official-link">
+            <a
+              href="https://haranomachi.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              原町商店街公式サイト
+            </a>
+          </p>
+        </section>
+
+        <figure class="news-sub-image fade-in">
+          <img
+            src="/images/haranomachi2026_2.jpeg"
+            alt="原町七夕まつり 光と音のパフォーマンス イベント案内"
+          />
+        </figure>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    /* Event Information */
+    .event-section {
+      max-width: 560px;
+      margin: 44px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .event-section-title {
+      margin: 0 0 24px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.18rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .event-info-list {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      color: #333333;
+    }
+
+    .event-info-list dt {
+      margin: 0;
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .event-info-list dd {
+      margin: 4px 0 18px;
+      font-size: 1.04rem;
+      line-height: 1.8;
+      letter-spacing: 0.008em;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .event-info-list dd:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-section a {
+      transition: opacity 0.3s ease;
+    }
+
+    .event-section a:hover {
+      opacity: 0.65;
+    }
+
+    .event-official-link {
+      margin: 28px 0 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.02rem;
+    }
+
+    /* Sub image */
+    .news-sub-image {
+      max-width: 560px;
+      margin: 44px auto 0;
+    }
+
+    .news-sub-image img {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .event-section {
+        max-width: 100%;
+        margin-top: 36px;
+        padding-top: 28px;
+      }
+
+      .event-info-list dd {
+        font-size: 1rem;
+      }
+
+      .news-sub-image {
+        max-width: 100%;
+        margin-top: 36px;
+      }
+
+      .news-sub-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</Layout>
