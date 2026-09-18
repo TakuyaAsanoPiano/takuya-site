@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout
   title="香りの標本 | さばね山蕎麦 | Takuya Asano"
-  description="2026年9月19日、山形県舟形町のさばね山蕎麦にて、浅野託矢による小さなピアノ演奏会「香りの標本」を開催します。完全予約制、雨天時は平沢山 定泉寺にて開催予定です。"
+  description="2026年9月19日、山形県舟形町のさばね山蕎麦にて、浅野託矢による小さなピアノ演奏会「香りの標本」を開催します。完全予約制。雨天の場合もさばね山蕎麦の屋内にて開催します。"
   ogImage="https://asanotakuya.com/images/sabanelive.jpg"
   ogUrl="https://asanotakuya.com/news/kaori-no-hyohon-sabaneyama-2026"
   ogType="article"
@@ -34,6 +34,15 @@ import Layout from "../../layouts/Layout.astro";
             小さな演奏会。
           </p>
         </header>
+
+        <div class="news-post-content fade-in">
+          <p>
+            <strong>【9月18日更新】</strong><br />
+            明日の演奏会は、予定通り「さばね山蕎麦」にて開催いたします。<br />
+            雨天の場合も、今回は定泉寺へは移動せず、さばね山蕎麦の屋内にて演奏予定です。<br />
+            ご来場の方は、さばね山蕎麦へお越しください。
+          </p>
+        </div>
 
         <figure class="news-post-image fade-in">
           <img src="/images/sabanelive.jpg" alt="香りの標本 さばね山蕎麦 告知画像" />
@@ -180,12 +189,12 @@ import Layout from "../../layouts/Layout.astro";
           <h2 class="event-section-title">会場・アクセス</h2>
 
           <dl class="event-info-list">
-            <dt>晴天時会場</dt>
+            <dt>会場</dt>
             <dd>
               さばね山蕎麦<br />
               〒999-4601<br />
               山形県最上郡舟形町舟形境の峰2981<br />
-              <span class="event-note">※屋外での開催を予定しています。</span><br />
+              <span class="event-note">※晴天時は屋外での開催を予定しています。</span><br />
               <a
                 href="https://maps.app.goo.gl/MNnRXZmHXtoMabEy5"
                 target="_blank"
@@ -195,19 +204,10 @@ import Layout from "../../layouts/Layout.astro";
               </a>
             </dd>
 
-            <dt>雨天時会場</dt>
+            <dt>雨天時</dt>
             <dd>
-              平沢山 定泉寺<br />
-              〒999-4601<br />
-              山形県最上郡舟形町舟形2979<br />
-              <span class="event-note">※雨天時はお寺での開催となります。</span><br />
-              <a
-                href="https://maps.app.goo.gl/7JpCqnaw8LHobj45A"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Google Mapsで開く
-              </a>
+              さばね山蕎麦の屋内にて開催します。<br />
+              <span class="event-note">※会場の変更はありません。</span>
             </dd>
           </dl>
         </section>
@@ -217,7 +217,8 @@ import Layout from "../../layouts/Layout.astro";
 
           <div class="event-text">
             <p>
-              雨天時は、会場を「平沢山 定泉寺」へ変更して開催予定です。
+              雨天の場合も、さばね山蕎麦の屋内にて開催します。<br />
+              会場の変更はありません。
             </p>
             <p>
               雨天時など当日のご案内は、ご予約の方へ個別にお知らせします。<br />
@@ -226,30 +227,6 @@ import Layout from "../../layouts/Layout.astro";
           </div>
         </section>
 
-        <section class="event-section fade-in">
-          <h2 class="event-section-title">雨天時駐車場案内</h2>
-
-          <div class="event-text">
-            <p>
-              雨天時にお車でお越しの方は、平沢山 定泉寺最寄りの公有駐車場をご利用ください。
-            </p>
-            <p>駐車場から会場までは徒歩約2分です。</p>
-          </div>
-
-          <figure class="event-map-image">
-            <img src="/images/sabanemap.jpg" alt="雨天時駐車場案内図" />
-          </figure>
-
-          <p class="event-map-link">
-            <a
-              href="https://maps.app.goo.gl/smuoyTD4h7qbSGHN7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              駐車場付近をGoogle Mapsで開く
-            </a>
-          </p>
-        </section>
       </article>
     </div>
   </main>
