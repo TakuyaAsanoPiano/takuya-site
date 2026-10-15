@@ -1,0 +1,318 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="夜の美術館2026 | Takuya Asano"
+  description="2026年11月1日・3日、秋保の杜 佐々木美術館で開催される「夜の美術館2026」に浅野託矢が出演。吉村尚子との光と音のパフォーマンス、中川和寿とのOTOTOE［音と絵］を行います。"
+  ogImage="https://asanotakuya.com/images/yoruakiu2026.jpg"
+  ogUrl="https://asanotakuya.com/news/yoru-no-bijutsukan-2026"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.10.16</p>
+          <h1 class="news-post-title">夜の美術館2026</h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img src="/images/yoruakiu2026.jpg" alt="夜の美術館2026 つきのみちかけ 告知画像" />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>
+            秋保の杜 佐々木美術館＆人形館で開催される<br />
+            「夜の美術館2026」に、2日間出演します。
+          </p>
+
+          <p>今年のテーマは「つきのみちかけ」。</p>
+
+          <p>
+            光や映像、美術、音楽などが重なる夜の美術館で、<br />
+            異なる表現者との2つの即興パフォーマンスを行います。
+          </p>
+        </div>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">11月1日（日）20:00〜　光と音のパフォーマンス</h2>
+
+          <div class="event-text">
+            <p>吉村尚子（映像・光） × 浅野託矢（音楽）</p>
+
+            <p>
+              映像から生まれる光を空間へと広げる吉村尚子と、<br />
+              ピアノやシンセサイザーを奏でる浅野託矢。
+            </p>
+
+            <p>
+              光と音がその場で呼応しながら、<br />
+              刻々と変化する風景をつくり出す即興パフォーマンスです。
+            </p>
+          </div>
+        </section>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">11月3日（火・祝）20:00〜　OTOTOE［音と絵］</h2>
+
+          <div class="event-text">
+            <p>中川和寿（ライブドローイング） × 浅野託矢（音楽）</p>
+
+            <p>ライブドローイングと音楽による即興パフォーマンス。</p>
+
+            <p>
+              7月のAKIULUMINARTでも共演した2人が、<br />
+              再び音と絵による表現を行います。
+            </p>
+          </div>
+        </section>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">Event Information</h2>
+
+          <dl class="event-info-list">
+            <dt>イベント名</dt>
+            <dd>夜の美術館2026</dd>
+
+            <dt>テーマ</dt>
+            <dd>つきのみちかけ</dd>
+
+            <dt>開催期間</dt>
+            <dd>2026年10月24日（土）〜11月15日（日）</dd>
+
+            <dt>浅野託矢 出演日時</dt>
+            <dd>
+              11月1日（日）20:00〜<br />
+              11月3日（火・祝）20:00〜
+            </dd>
+
+            <dt>会場</dt>
+            <dd>
+              秋保の杜 佐々木美術館＆人形館<br />
+              宮城県仙台市太白区秋保町境野字中原128-9
+            </dd>
+
+            <dt>パフォーマンスデー</dt>
+            <dd>17:30〜21:00</dd>
+
+            <dt>入館料</dt>
+            <dd>
+              一般 1,000円<br />
+              学生・年間パス所持者 500円<br />
+              中学生以下 無料
+            </dd>
+
+            <dt>公式案内</dt>
+            <dd>
+              <a
+                href="https://akiunomori.jp/2026/09/22/夜の美術館-2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                秋保の杜 佐々木美術館＆人形館 公式案内
+              </a>
+            </dd>
+          </dl>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    /* Event sections */
+    .event-section {
+      max-width: 560px;
+      margin: 44px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .event-section-title {
+      margin: 0 0 24px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.18rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .event-text {
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      color: #333333;
+    }
+
+    .event-text p {
+      margin: 0 0 16px;
+      font-size: 1.04rem;
+      line-height: 1.8;
+      letter-spacing: 0.008em;
+    }
+
+    .event-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-info-list {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      color: #333333;
+    }
+
+    .event-info-list dt {
+      margin: 0;
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .event-info-list dd {
+      margin: 4px 0 18px;
+      font-size: 1.04rem;
+      line-height: 1.8;
+      letter-spacing: 0.008em;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .event-info-list dd:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-section a {
+      transition: opacity 0.3s ease;
+    }
+
+    .event-section a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .event-section {
+        max-width: 100%;
+        margin-top: 36px;
+        padding-top: 28px;
+      }
+
+      .event-text p,
+      .event-info-list dd {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</Layout>
