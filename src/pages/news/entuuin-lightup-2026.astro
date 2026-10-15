@@ -1,0 +1,306 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="円通院 紅葉ライトアップ2026 | Takuya Asano"
+  description="2026年10月24日〜11月23日に宮城県松島町の円通院で開催される「紅葉ライトアップ2026」に、浅野託矢がピアノ演奏で出演。10月・11月の計10日間、ライトアップされた庭園で演奏します。"
+  ogImage="https://asanotakuya.com/images/matushima2026.jpg"
+  ogUrl="https://asanotakuya.com/news/entuuin-lightup-2026"
+  ogType="article"
+>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-title">Takuya Asano</a>
+      <nav class="nav">
+        <a href="/works">Works</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <article class="news-post">
+        <a href="/news" class="back-link fade-in">← Back to News</a>
+
+        <header class="news-post-header fade-in">
+          <p class="news-date">2026.10.16</p>
+          <h1 class="news-post-title">円通院 紅葉ライトアップ2026</h1>
+        </header>
+
+        <figure class="news-post-image fade-in">
+          <img
+            src="/images/matushima2026.jpg"
+            alt="円通院 紅葉ライトアップ2026 告知画像"
+          />
+        </figure>
+
+        <div class="news-post-content fade-in">
+          <p>
+            宮城県松島町の円通院で開催される<br />
+            「紅葉ライトアップ2026」にて、ピアノを演奏します。
+          </p>
+
+          <p>
+            秋の庭園を照らす光と、<br />
+            移ろう景色の中で響く音。
+          </p>
+
+          <p>期間中、10日間の演奏を予定しています。</p>
+        </div>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">浅野託矢 出演日</h2>
+
+          <dl class="event-info-list">
+            <dt>10月</dt>
+            <dd>25日（日）・26日（月）・28日（水）・29日（木）・30日（金）</dd>
+
+            <dt>11月</dt>
+            <dd>8日（日）・10日（火）・11日（水）・16日（月）・19日（木）</dd>
+          </dl>
+        </section>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">演奏について</h2>
+
+          <div class="event-text">
+            <p>
+              演奏はライトアップ開催時間中、<br />
+              約30分ごとに出演者が交代しながら行われます。
+            </p>
+
+            <p>出演順は当日の進行によって異なります。</p>
+          </div>
+        </section>
+
+        <section class="event-section fade-in">
+          <h2 class="event-section-title">Event Information</h2>
+
+          <dl class="event-info-list">
+            <dt>イベント名</dt>
+            <dd>円通院 紅葉ライトアップ2026</dd>
+
+            <dt>開催期間</dt>
+            <dd>2026年10月24日（土）〜11月23日（月・祝）</dd>
+
+            <dt>開催時間</dt>
+            <dd>17:30〜21:00</dd>
+
+            <dt>最終受付</dt>
+            <dd>20:45</dd>
+
+            <dt>会場</dt>
+            <dd>
+              円通院<br />
+              宮城県宮城郡松島町松島町内67
+            </dd>
+
+            <dt>夜間拝観料</dt>
+            <dd>
+              大人（中学生以上）1,500円<br />
+              小学生以下 無料
+            </dd>
+
+            <dt>公式案内</dt>
+            <dd>
+              <a
+                href="https://www.entuuin.or.jp/lightup/2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                円通院 公式案内
+              </a>
+            </dd>
+          </dl>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+  <style>
+    .news-post {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .news-post-header {
+      margin-bottom: 32px;
+    }
+
+    .news-date {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    .news-post-title {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .news-post-image {
+      margin: 0 0 40px;
+    }
+
+    .news-post-image img {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .news-post-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .news-post-content p {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      letter-spacing: 0.008em;
+      color: #333333;
+    }
+
+    /* Event sections */
+    .event-section {
+      max-width: 560px;
+      margin: 44px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .event-section-title {
+      margin: 0 0 24px;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 1.18rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .event-text {
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      color: #333333;
+    }
+
+    .event-text p {
+      margin: 0 0 16px;
+      font-size: 1.04rem;
+      line-height: 1.8;
+      letter-spacing: 0.008em;
+    }
+
+    .event-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-info-list {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      color: #333333;
+    }
+
+    .event-info-list dt {
+      margin: 0;
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .event-info-list dd {
+      margin: 4px 0 18px;
+      font-size: 1.04rem;
+      line-height: 1.8;
+      letter-spacing: 0.008em;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .event-info-list dd:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-section a {
+      transition: opacity 0.3s ease;
+    }
+
+    .event-section a:hover {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 640px) {
+      .back-link {
+        margin-bottom: 32px;
+        font-size: 0.92rem;
+      }
+
+      .news-post-header {
+        margin-bottom: 24px;
+      }
+
+      .news-post-image {
+        margin-bottom: 28px;
+      }
+
+      .news-post-image img {
+        max-width: 100%;
+      }
+
+      .news-post-content {
+        max-width: 100%;
+      }
+
+      .news-post-content p {
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .event-section {
+        max-width: 100%;
+        margin-top: 36px;
+        padding-top: 28px;
+      }
+
+      .event-text p,
+      .event-info-list dd {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</Layout>
